@@ -1,4 +1,4 @@
-# WDP Projekt Zespołowy
+# Projekt aplkiacji biznes-plan
 
 ## Opis projektu
 
@@ -51,3 +51,10 @@ DO UZUPEŁNIENIA
 watch:sassprefixer - Scirpt launch collection for CSS(3) which prefixes mixins library for Sass/Scss.
 
 watch:browsersync - Browsersync script cuts out repetitive manual tasks. From live reloads to URL pushing, form replication to click mirroring.
+
+# 00. Links
+Own app about creating buisness-plan.
+
+repo --> https://github.com/MichalAW/00.Business-plan.git
+
+io-site ---> https://michalaw.github.io/
