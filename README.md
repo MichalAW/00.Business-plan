@@ -2,11 +2,11 @@
 
 ## Opis projektu
 
-DO UZUPEŁNIENIA
-
-## Demo
-
-DO UZUPEŁNIENIA
+-Projekt ma celu stworzenie aplikacji, odpowiedzialnej za tworzenie biznes-planów.
+-Projekt zakłada, użytkownika logującego się na konto.
+-Użytkownik loguje się, wybiera poszczególne kafelki zależnie od wyboru (Farmer,Enterpriser etc)
+-W efekcie otrzymuje biznes plan.
+-Projekt ukierunkowany jest do micro i mid przedsiębiorców.
 
 ## Inicjacja projektu
 
@@ -34,24 +34,27 @@ dla plików, które zostały wybrane do za-commit'owania.
 
 ## Konwencje i dobre praktyki
 
-DO UZUPEŁNIENIA
+1. Podział na komponenty plików scss, html, js
 
-# task WDP190504-35
+## Działanie projektu
 
-## Description
+# ETAP 1 LOGOWANIA REJESTRACJI
 
--CLI for Autoprefixer
+1. Sekcja Topbar, klasa 'fa-user' odpowiedzialna za logowania, klasa 'fa-lock' odpowiedzialna za rejestracje. linia 23 i 29
+2. Kliknięcie w login/register, powoduje wyskoczenie modalu, do logowania/rejestracji potrzebne mail + hasło.
+3. Kliknięcie button Submit tworzy i zapisuje użytkownika
+4. Userem jest mail użytkownika
 
-- Live CSS Reload & Browser Syncing
-  -Wrapper around libsass
-  -Use glob patterns to view filesets and run a command when something is added, changed or deleted.
+# ETAP 2 KORZYSTANIA Z APKI
+1. Rozwijamy pierwszą listę, klasa 'ddProducts'. Element Selection linia 65
+2. Roziwjamy drugą listę, wybieramy sposób rozliczania.
+3. Pojawiają sie kafelki.
+4. Wybieramy nas interesujące i klikamy submit
 
-## scripts
-
-watch:sassprefixer - Scirpt launch collection for CSS(3) which prefixes mixins library for Sass/Scss.
-
-watch:browsersync - Browsersync script cuts out repetitive manual tasks. From live reloads to URL pushing, form replication to click mirroring.
-
+# ETAP 3 KORZYSTANIA Z APKI
+1. Pojawia się Score z przygotowanądokumentacją (połączony efekt kafelków)
+2. Aby go otrzymać i pobrać należy kliknąć w koszyk, element a clasa 'cart-icon'. Linia 50
+3. Po kliknięciu pobiera się dokument.
 # 00. Links
 Own app about creating buisness-plan.
 
