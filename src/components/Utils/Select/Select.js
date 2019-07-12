@@ -3,13 +3,17 @@ import React, { Component } from 'react'
 export default class Select extends Component {
 	render() {
 		return (
-      <select class="ddProducts subject">
-        <option value="">Select a category</option>
-        <option value="Farmer">Farmer</option>
-        <option value="Enterpriser">Enterpriser</option>
-        <option value="Companies">Companies</option>
-        <option value="Communities">Communities</option>
-      </select>
+      <div className="category">
+        <i className="fas fa-list-ul"></i>
+        <select className="ddProducts form">
+          <option value="">{this.props.defaultText}</option>
+          {
+            this.props.options.map(option=>{
+              return <option value={option.value}>{option.text}</option>
+            })
+          }
+        </select>
+      </div>
 		)
 	}
 }

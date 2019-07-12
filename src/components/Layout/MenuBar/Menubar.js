@@ -1,33 +1,15 @@
 import React, { Component } from 'react'
-
-export default class Select extends Component {
+import Select from '../../Utils/Select/Select'
+export default class Menubar extends Component {
 	render() {
 		return (
-      <div class="menu-bar">
-				<div class="container">
-					<div class="row align-items-center">
-						<div class="col products-display">
-							<form action="" class="search-form">
-								<div class="category">
-									<i class="fas fa-list-ul"></i>
-									<select class="ddProducts subject">
-										<option value="">Select a category</option>
-										<option value="Farmer">Farmer</option>
-										<option value="Enterpriser">Enterpriser</option>
-										<option value="Companies">Companies</option>
-										<option value="Communities">Communities</option>
-									</select>
-								</div>
-								<div class="category form">
-									<i class="fas fa-list-ul"></i>
-									<select class="ddProducts form">
-										<option value="">Select a category</option>
-										<option value="Farmer">DEMAND</option>
-										<option value="Enterpriser">PIT</option>
-										<option value="Companies">KPiR</option>
-										<option value="Communities">ACT</option>
-									</select>
-								</div>
+      <div className="menu-bar">
+				<div className="container">
+					<div className="row align-items-center">
+						<div className="col products-display">
+              <form className="search-form">
+                <Select defaultText="Select a category" options={[{value:"farmer",text:"Farmer"},{value:"Enterpriser",text:"Enterpriser"},{value:"Companies",text:"Companies"},{value:"Communities",text:"Communities"}]}/>
+                <Select defaultText="Select a subject" options={[{value:"farmer",text:"DEMAND"},{value:"Enterpriser",text:"PIT"},{value:"Companies",text:"KPiR"},{value:"Communities",text:"ACT"}]}/>
 							</form>
 						</div>
 					</div>
