@@ -9,7 +9,7 @@ export default class Topbar extends Component {
 						<div className="col-sm-6 col-md-6 col-lg-6 col-xl-6 top-bar-mobile-lang text-left">
 							<ul>
 								<li>
-									<a href="#">USD <i className="fas fa-caret-down"></i></a>
+									<a href="#">PLN <i className="fas fa-caret-down"></i></a>
 								</li>
 								<li>
 									<a href="#">English <i className="fas fa-caret-down"></i></a>
