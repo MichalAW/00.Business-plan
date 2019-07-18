@@ -9,30 +9,29 @@ export default class Topbar extends Component {
 						<div className="col-sm-6 col-md-6 col-lg-6 col-xl-6 top-bar-mobile-lang text-left">
 							<ul>
 								<li>
-									<a href="#">PLN <i className="fas fa-caret-down"></i></a>
+									PLN<i className="fas fa-caret-down"></i>
 								</li>
 								<li>
-									<a href="#">English <i className="fas fa-caret-down"></i></a>
+								  English <i className="fas fa-caret-down"></i>
 								</li>
 								<li>
-									<a href="#">Help <i className="fas fa-caret-down"></i></a>
+								  Help <i className="fas fa-caret-down"></i>
 								</li>
 							</ul>
 						</div>
 						<div className="col-sm-6 col-md-6 col-lg-6 col-xl-6 top-bar-mobile-user text-right">
 							<ul>
 								<li>
-									<a href="#"><i className="fas fa-user"></i>
-									<p>Login</p></a>
+								  <i className="fas fa-user"></i>
+									<p>Login</p>
 								</li>
 								<li>
-									<a href="#">
 									<i className="fas fa-lock"></i>
-									<p>Register</p></a>
+									<p>Register</p>
 								</li>
 								<li>
-									<a href="#"><i className="fas fa-bars"></i></a>
-								</li>
+                  <i className="fas fa-bars"></i>
+                </li>
 							</ul>
 						</div>
 					</div>

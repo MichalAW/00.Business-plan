@@ -6,11 +6,11 @@ export default class Footer extends Component {
       <section className="Home">
         <div className="col-auto menu">
           <ul>
-            <li><a href="#" className="active">Home</a></li>
-            <li><a href="#">About site</a></li>
-            <li><a href="#">Terms</a></li>
-            <li><a href="#">How to use it</a></li>
-            <li><a href="#">News</a></li>
+            <li><div className="active">Home</div></li>
+            <li>About sit</li>
+            <li>Terms</li>
+            <li>ow to use it</li>
+            <li>News</li>
           </ul>
         </div>
       </section>
