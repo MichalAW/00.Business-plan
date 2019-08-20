@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import Select from '../../Utils/Select/Select'
+import './Menubar.scss';
 export default class Menubar extends Component {
 	render() {
 		return (

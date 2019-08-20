@@ -1,4 +1,4 @@
-@import "variables";
+@import "./variables";
 
 @import url("https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900");
 
@@ -11,11 +11,7 @@
 @import "components/hover";
 @import "components/header";
 @import "components/panel-bar";
-@import "../components/HomeContent/HomeContent";
-@import "../components/Layout/MenuBar/Menubar";
-@import "../components/Layout/Midbar/Midbar";
-@import "../components/Layout/Score/Scores";
-@import "../components/Layout//Topbar/Topbar";
+
 
 body {
     font-family: "Poppins", sans-serif;

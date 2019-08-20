@@ -1,5 +1,5 @@
-import React, { Component } from 'react'
-
+import React, { Component } from 'react';
+import './Topbar.scss';
 export default class Topbar extends Component {
 	render() {
 		return (

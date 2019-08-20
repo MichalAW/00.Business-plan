@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-
+import './Scores.scss';
 export default class Score extends Component {
 	render() {
 		return (

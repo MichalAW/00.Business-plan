@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-
+import './Midbar.scss';
 export default class Select extends Component {
 	render() {
 		return (
