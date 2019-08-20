@@ -1,0 +1,222 @@
+.menu-bar {
+	box-shadow: 2px 3.464px 6px $menu-bar-shadow;
+	background-color: $font-button-color;
+
+	form {
+		max-width: 100%;
+	}
+
+	.container>.row {
+		height: 84px;
+		display: flex;
+		justify-content: center;
+	}
+
+	.col {
+		margin-top: 1rem;
+		margin-bottom: 0.5rem;
+		display: flex;
+		justify-content: center;
+	}
+
+	.menu {
+		display: flex;
+		align-self: stretch;
+
+		ul {
+			margin: 0;
+			padding: 0;
+			display: flex;
+
+			li {
+				list-style: none;
+				display: flex;
+				align-items: stretch;
+
+				a {
+					color: $text-color;
+					text-transform: uppercase;
+					font-size: 12px;
+					padding: 1rem;
+					text-decoration: none;
+					display: flex;
+					align-items: center;
+					border-top: 4px solid $font-button-color;
+					font-weight: 500;
+					letter-spacing: 1px;
+
+					&:hover,
+					&.active {
+						@extend .hover-bg;
+						@extend .hover-text;
+						@extend .hover-duration;
+						background-color: $primary;
+						color: $font-button-color;
+						border-color: $primary;
+					}
+
+					&.active {
+						border-color: $text-color;
+					}
+				}
+			}
+		}
+	}
+
+	.search-form {
+		border: 1px solid $form-border-color;
+		display: inline-flex;
+		height: 45px;
+		color: $text-color;
+
+		.category {
+			display: flex;
+			align-items: center;
+			width: 220px;
+			position: relative;
+			width: 100vw;
+			max-width: 500px;
+			margin-top: 1rem;
+			margin-bottom: 1rem;
+
+			&:hover {
+				background-color: $background-hover;
+			}
+
+			i:first-child {
+				color: $primary;
+				position: absolute;
+				left: 10px;
+				z-index: 0;
+			}
+
+			i:last-child {
+				position: absolute;
+				right: 10px;
+				z-index: 0;
+			}
+
+			.ddproducts {
+				-webkit-appearance: none;
+				border: 0;
+				outline: 0;
+				background-color: transparent;
+				outline: none;
+				padding: 5px 5px 5px 35px;
+				font-size: 14px;
+				position: relative;
+				z-index: 1;
+				cursor: pointer;
+
+				option {
+					background-color: $primary;
+					cursor: pointer;
+
+					.list-ul {
+						background-color: $primary;
+						list-style-type: none;
+						font-size: 15px;
+						padding: 0;
+						text-align: center;
+						width: 220px;
+						position: absolute;
+						z-index: 10;
+						top: 37px;
+						left: -1px;
+						display: none;
+
+						a {
+							color: $link-color;
+							text-decoration: none;
+						}
+
+						li {
+							padding: 5px 0;
+							display: block;
+
+							&:hover {
+								background-color: $background-hover;
+							}
+
+							&:hover a {
+								color: $font-button-color;
+							}
+						}
+
+						li>ul {
+							position: absolute;
+							top: 70px;
+							left: 220px;
+							z-index: 10;
+							width: 200px;
+							padding-inline-start: 0px;
+							background-color: $primary;
+							display: none;
+						}
+
+						.link-sofa>ul a {
+							color: $link-color;
+
+							&:hover {
+								color: $font-button-color;
+							}
+						}
+
+						.link-sofa:hover ul {
+							display: block;
+						}
+					}
+				}
+			}
+
+			.category:hover .list-ul {
+				display: block;
+			}
+
+			.search-field {
+				display: flex;
+				align-items: center;
+				position: relative;
+				width: 220px;
+
+				input {
+					border: 0;
+					padding-left: 10px;
+					font-size: 14px;
+					outline: none;
+					width: 100%;
+					position: relative;
+					background-color: transparent;
+					cursor: pointer;
+				}
+
+				.search-field {
+					display: flex;
+					align-items: center;
+					position: relative;
+					width: 220px;
+
+					input {
+						border: 0;
+						padding-left: 10px;
+						font-size: 14px;
+						outline: none;
+						background-color: transparent;
+						cursor: pointer;
+
+						&::placeholder {
+							color: $product-old-price-color;
+						}
+					}
+
+					button {
+						border: 0;
+						background-color: transparent;
+						outline: none;
+						cursor: pointer;
+					}
+				}
+			}
+		}
+	}
+}

@@ -11,8 +11,12 @@
 @import "components/hover";
 @import "components/header";
 @import "components/panel-bar";
-
+@import "../components/HomeContent/HomeContent";
+@import "../components/Layout/MenuBar/Menubar";
+@import "../components/Layout/Midbar/Midbar";
+@import "../components/Layout/Score/Scores";
+@import "../components/Layout//Topbar/Topbar";
 
 body {
-  font-family: "Poppins", sans-serif;
+    font-family: "Poppins", sans-serif;
 }

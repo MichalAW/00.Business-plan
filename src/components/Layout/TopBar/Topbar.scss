@@ -1,0 +1,62 @@
+.top-bar {
+	background-color: $header-topbar-bg;
+
+	.top-bar-mobile-lang {
+		@media (max-width: 576px) {
+			width: 60%;
+		}
+	}
+
+	.top-bar-mobile-user {
+		@media (max-width: 576px) {
+			width: 40%;
+		}
+	}
+
+	ul {
+		list-style: none;
+		margin: 0;
+		padding: 0;
+
+		li {
+			display: inline-block;
+			line-height: 55px;
+
+			a {
+				color: $font-button-color;
+				font-size: 13px;
+
+				&:hover {
+					@extend .hover-duration;
+					@extend .hover-text;
+					color: $primary;
+					text-decoration: none;
+				}
+
+				p {
+					display: inline-block;
+
+					@media (max-width: 576px) {
+						display: none;
+					}
+				}
+			}
+		}
+	}
+
+	.text-left ul li {
+		margin-right: 1.5rem;
+
+		i {
+			margin-left: 5px;
+		}
+	}
+
+	.text-right ul li {
+		margin-left: 1.5rem;
+
+		i {
+			margin-right: 5px;
+		}
+	}
+}

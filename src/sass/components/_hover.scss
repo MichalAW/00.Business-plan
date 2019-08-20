@@ -1,10 +1,10 @@
 .hover-duration {
-  transition: color $hover-animation-text-time linear,
-    background-color $hover-animation-bg-time linear;
+	transition: color $hover-animation-text-time linear,
+	background-color $hover-animation-bg-time linear;
 }
 .hover-text {
-  color: $hover-animation-text-color;
+  	color: $hover-animation-text-color;
 }
 .hover-bg {
-  background-color: $hover-animation-bg-color;
+  	background-color: $hover-animation-bg-color;
 }
