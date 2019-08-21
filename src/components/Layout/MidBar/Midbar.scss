@@ -1,5 +1,8 @@
 @import '../../../sass/variables';
-@import '../../../sass/components/hover';
+@import '../../../sass/Additionalcomponents/hover';
+@import '../../../sass/Additionalcomponents/header';
+@import '../../../sass/Additionalcomponents/button';
+
 .company-claim {
 	background-color: $header-bg;
 	display: flex;
@@ -12,6 +15,9 @@
 	.company-claim-logo {
 		@media (max-width: 576px) {
 			width: 60%;
+		}
+		img {
+			width: 255px;
 		}
 	}
 

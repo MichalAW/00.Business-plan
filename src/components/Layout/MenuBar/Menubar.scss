@@ -1,5 +1,8 @@
 @import '../../../sass/variables';
-@import '../../../sass/components/hover';
+@import '../../../sass/Additionalcomponents/hover';
+@import '../../../sass/Additionalcomponents/header';
+@import '../../../sass/Additionalcomponents/button';
+
 .menu-bar {
 	box-shadow: 2px 3.464px 6px $menu-bar-shadow;
 	background-color: $font-button-color;

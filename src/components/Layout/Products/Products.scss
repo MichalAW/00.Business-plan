@@ -1,5 +1,10 @@
+@import '../../../sass/variables';
+@import '../../../sass/Additionalcomponents/hover';
+@import '../../../sass/Additionalcomponents/header';
+@import '../../../sass/Additionalcomponents/button';
+
 * {
- 	box-sizing: border-box;
+	box-sizing: border-box;
 }
 
 body {
@@ -10,7 +15,7 @@ body {
 .panel-bar {
 	margin-bottom: 30px;
 
-	.row > * {
+	.row>* {
 		border-bottom: 4px solid #e2e2e2;
 	}
 
@@ -90,11 +95,11 @@ body {
 				margin-left: 0.5rem;
 
 				a {
-				display: block;
-				width: 13px;
-				height: 13px;
-				border-radius: 6px;
-				background-color: #e1e1e1;
+					display: block;
+					width: 13px;
+					height: 13px;
+					border-radius: 6px;
+					background-color: #e1e1e1;
 
 					&.active,
 

@@ -2,15 +2,14 @@
 
 @import url("https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900");
 
-@import "bootstrap/bootstrap.scss";
-@import "fontawesome/fontawesome";
-@import "fontawesome/solid";
-@import "fontawesome/brands";
-@import "fontawesome/regular";
+@import "./bootstrap/bootstrap.scss";
+@import "./fontawesome/fontawesome.scss";
+@import "./fontawesome/solid.scss";
+@import "./fontawesome/brands.scss";
+@import "./fontawesome/regular.scss";
 
-@import "components/hover";
-@import "components/header";
-@import "components/panel-bar";
+@import "./Additionalcomponents/header";
+@import "./Additionalcomponents/hover";
 
 
 body {
