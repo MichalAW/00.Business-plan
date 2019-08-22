@@ -1,8 +1,7 @@
-@import '../../../sass/variables';
-@import '../../../sass/Additionalcomponents/hover';
-@import '../../../sass/Additionalcomponents/header';
-@import '../../../sass/Additionalcomponents/button';
-@import '../../../sass/bootstrap/bootstrap.scss';
+@import '../../../../sass/variables';
+@import '../../../../sass/Additionalcomponents/hover';
+@import '../../../../sass/Additionalcomponents/button';
+@import '../../../../sass/bootstrap/bootstrap.scss';
 
 .product-box {
 	background-color: $font-button-color;
@@ -18,6 +17,7 @@
 		text-decoration: none;
 		visibility: visible;
 		transition: all 2s;
+		cursor: pointer;
 	}
 
 	&:hover .price {

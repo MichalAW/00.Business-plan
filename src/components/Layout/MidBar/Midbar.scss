@@ -1,10 +1,9 @@
 @import '../../../sass/variables';
 @import '../../../sass/Additionalcomponents/hover';
-@import '../../../sass/Additionalcomponents/header';
 @import '../../../sass/Additionalcomponents/button';
 
 .company-claim {
-	background-color: $header-bg;
+	background-color: $header-black;
 	display: flex;
 	flex-direction: row;
 

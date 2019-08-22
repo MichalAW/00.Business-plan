@@ -2,6 +2,10 @@
 import React, { Component } from 'react'
 import './Midbar.scss';
 import logo from '../../../images/logo.jpg';
+import '../../../../node_modules/bootstrap/dist/css/bootstrap-reboot.min.css';
+import '../../../../node_modules/bootstrap/dist/css/bootstrap-reboot.css';
+import '../../../../node_modules/bootstrap/dist/css/bootstrap.css';
+import '../../../../node_modules/bootstrap/dist/css/bootstrap.min.css';
 export default class Select extends Component {
 	render() {
 		return (

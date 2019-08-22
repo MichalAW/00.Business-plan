@@ -1,7 +1,10 @@
 import React, { Component } from 'react';
 import './Footer.scss';
 import cards from '../../../images/cards.png';
-
+import '../../../../node_modules/bootstrap/dist/css/bootstrap-reboot.min.css';
+import '../../../../node_modules/bootstrap/dist/css/bootstrap-reboot.css';
+import '../../../../node_modules/bootstrap/dist/css/bootstrap.css';
+import '../../../../node_modules/bootstrap/dist/css/bootstrap.min.css';
 export default class Footer extends Component {
 	render() {
 		return (

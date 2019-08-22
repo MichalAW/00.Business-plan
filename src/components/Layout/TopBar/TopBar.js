@@ -1,5 +1,9 @@
 import React, { Component } from 'react';
 import './Topbar.scss';
+import '../../../../node_modules/bootstrap/dist/css/bootstrap-reboot.min.css';
+import '../../../../node_modules/bootstrap/dist/css/bootstrap-reboot.css';
+import '../../../../node_modules/bootstrap/dist/css/bootstrap.css';
+import '../../../../node_modules/bootstrap/dist/css/bootstrap.min.css';
 export default class Topbar extends Component {
 	render() {
 		return (

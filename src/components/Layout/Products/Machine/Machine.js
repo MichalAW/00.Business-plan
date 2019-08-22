@@ -1,43 +1,26 @@
 /* eslint-disable jsx-a11y/img-redundant-alt */
 import React, { Component } from 'react'
-import './Products.scss';
-import './ProductBox.scss';
-
+import './Machine.scss';
+import car from '../../../../images/car.jpg';
+import tractor from '../../../../images/tractor.jpg';
+import factory from '../../../../images/factory.jpg';
+import forklift from '../../../../images/forklift.jpg';
+import '../../../../../node_modules/bootstrap/dist/css/bootstrap-reboot.min.css';
+import '../../../../../node_modules/bootstrap/dist/css/bootstrap-reboot.css';
+import '../../../../../node_modules/bootstrap/dist/css/bootstrap.css';
+import '../../../../../node_modules/bootstrap/dist/css/bootstrap.min.css';
 export default class Select extends Component {
 	render() {
 		return (
-			<section className="section--products">
+			<section className="section--product">
 				<div className="container">
-					<div className="panel-bar">
-						<div className="row no-gutters align-items-end">
-							<div className="col-auto heading"><h3>New furniture</h3></div>
-							<div className="col menu">
-								<ul>
-									<li className="active accordion"><a src="#chair">Bed</a></li>
-									<li className="accordion"><a src="#dining">Chair</a></li>
-									<li className="accordion"><a src="#chair">Sofa</a></li>
-									<li className="accordion"><a src="#chair">Table</a></li>
-									<li className="accordion"><a src="#dining">Dining</a></li>
-								</ul>
-							</div>
-							<div className="col-auto dots">
-								<ul>
-									<li><a src="#" className="active"></a></li>
-									<li><a src="#"></a></li>
-									<li><a src="#"></a></li>
-								</ul>
-							</div>
-						</div>
-					</div>
 					<div className="row items_active show" id="chair">
 						<div className="col-xs-12 col-sm-6 col-md-6 col-lg-4 col-xl-3">
 							<div className="product-box">
 								<div className="photo">
 									<a src="product-details.html">
-										<img
-											src="https://urzadzaj24.pl/3227-large_default/kanapa-pikowana-doria-.jpg"
-											alt="kanapa1"/>
-										</a>
+										<img src={car} alt="car"/>
+									</a>
 									<div className="sale">sale</div>
 									<div className="buttons">
 										<a src="#" className="btn-main-small box-button">Quick View</a>
@@ -48,7 +31,7 @@ export default class Select extends Component {
 									</div>
 								</div>
 								<div className="content">
-									<h5>Aenean Ru Bristique</h5>
+									<h5>Car</h5>
 									<div className="stars">
 										<span className="full star"></span> <span className="full star"></span>
 										<span className="star"></span> <span className="star"></span>
@@ -70,10 +53,8 @@ export default class Select extends Component {
 							<div className="product-box">
 							<div className="photo">
 								<a src="product-details.html">
-								<img
-									src="https://urzadzaj24.pl/1770-tm_large_default/cesar-vip-2-sofa-z-funkcja-spania.jpg"
-									alt="sofa do spania"
-								/></a>
+									<img src={tractor} alt="tractor"/>
+								</a>
 								<div className="sale">sale</div>
 								<div className="buttons">
 									<a src="#" className="btn-main-small box-button">Quick View</a>
@@ -83,7 +64,7 @@ export default class Select extends Component {
 								</div>
 							</div>
 							<div className="content">
-								<h5>Aenean Ru Bristique</h5>
+								<h5>Tractor</h5>
 								<div className="stars">
 									<span className="full star"></span> <span className="full star"></span>
 									<span className="star"></span> <span className="star"></span>
@@ -109,10 +90,7 @@ export default class Select extends Component {
 							<div className="product-box">
 								<div className="photo">
 									<a src="product-details.html">
-										<img
-											src="https://urzadzaj24.pl/1936-tm_large_default/deram-2-wspania%C5%82a-sofa-z-funkcj%C4%85-spania.jpg"
-											alt="soda czarna"
-										/>
+										<img src={factory} alt="factory"/>
 									</a>
 									<div className="sale">sale</div>
 										<div className="buttons">
@@ -122,7 +100,7 @@ export default class Select extends Component {
 									</div>
 								</div>
 								<div className="content">
-									<h5>Aenean Ru Bristique</h5>
+									<h5>For Factory</h5>
 									<div className="stars">
 										<span className="full star"></span> <span className="full star"></span>
 										<span className="star"></span> <span className="star"></span>
@@ -149,10 +127,7 @@ export default class Select extends Component {
 							<div className="product-box">
 								<div className="photo">
 									<a src="product-details.html">
-										<img
-											src="https://urzadzaj24.pl/1321-tm_large_default/%C5%82%C3%B3%C5%BCko-drewniane-bursztyn.jpg"
-											alt="lozko drewniane"
-										/>
+										<img src={forklift} alt="forklift"/>
 									</a>
 									<div className="sale">sale</div>
 									<div className="buttons">
@@ -164,7 +139,7 @@ export default class Select extends Component {
 									</div>
 								</div>
 								<div className="content">
-									<h5>Aenean Ru Bristique</h5>
+									<h5>Forklift</h5>
 									<div className="stars">
 										<span className="full star"></span> <span className="full star"></span>
 										<span className="star"></span> <span className="star"></span>
@@ -336,7 +311,7 @@ export default class Select extends Component {
 								</div>
 							</div>
 						</div>
-					</div>
+						</div>
 					</div>
 				</div>
 			</section>
