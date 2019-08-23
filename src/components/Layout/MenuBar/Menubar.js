@@ -10,6 +10,19 @@ export default class Menubar extends Component {
 		return (
 			<div className="menu-bar">
 				<div className="container">
+					<div className="section--panel_bar">
+						<div className="container">
+							<div className="panel-bar">
+								<div className="row no-gutters align-items-end">
+									<div className="col-auto heading">
+										<h3>Select Below your category, subject and revenue</h3>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div className="container">
 					<div className="row align-items-center">
 						<div className="col products-display">
 							<form className="search-form">
