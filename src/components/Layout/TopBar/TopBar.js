@@ -4,43 +4,64 @@ import '../../../../node_modules/bootstrap/dist/css/bootstrap-reboot.min.css';
 import '../../../../node_modules/bootstrap/dist/css/bootstrap-reboot.css';
 import '../../../../node_modules/bootstrap/dist/css/bootstrap.css';
 import '../../../../node_modules/bootstrap/dist/css/bootstrap.min.css';
+
+// var links = document.querySelectorAll('.topbar a');
+// var sections = document.querySelectorAll('section');
+
+// function toggleTopbar() {
+// 	document.getElementById('topbar').classList.toggle('active');
+// }
+
+// // event for all links in topbar
+// for (var i = 0; i < links.length; i++) {
+// 	links[i].addEventListener('click', function () {
+
+// 		// remove class active from all sections
+// 		for (var i = 0; i < sections.length; i++) {
+// 			sections[i].classList.remove('active');
+// 		}
+// 	});
+
+// 	toggle.addEventListener("click", function () {
+// 		toggleTopbar();
+// 	});
+// }
+
+
 export default class Topbar extends Component {
 	render() {
 		return (
-			<section className="top-bar">
-				<div className="container">
-					<div className="row">
-						<div className="col-sm-6 col-md-6 col-lg-6 col-xl-6 top-bar-mobile-lang text-left">
-							<ul>
-								<li>
-									PLN<i className="fas fa-caret-down"></i>
-								</li>
-								<li>
-									English<i className="fas fa-caret-down"></i>
-								</li>
-								<li>
-									Help<i className="fas fa-caret-down"></i>
-								</li>
-							</ul>
+			<section className="about">
+				<div className="background">
+					<div className="container">
+						<div className="row">
+							<div className="col-sm-12 col-xs-12">
+								<div className="topbar" id="topbar">
+									<div className="toggle-btn" id="toggle">
+										<span></span>
+										<span></span>
+										<span></span>
+									</div>
+									<ul>
+										<li><a className="active" href="#">Home</a></li>
+										<li><a href="#">Services</a></li>
+										<li><a href="#">Portfolio</a></li>
+										<li><a href="#">About</a></li>
+										<li><a href="#">Contact</a></li>
+									</ul>
+								</div>
+							</div>
 						</div>
-						<div className="col-sm-6 col-md-6 col-lg-6 col-xl-6 top-bar-mobile-user text-right">
-							<ul>
-								<li>
-								<i className="fas fa-user"></i>
-									<p>Login</p>
-								</li>
-								<li>
-									<i className="fas fa-lock"></i>
-									<p>Register</p>
-								</li>
-								<li>
-									<i className="fas fa-bars"></i>
-								</li>
-							</ul>
+					</div>
+					<div className="welcome">
+						<h3>Welcome to our studio!</h3>
+						<h1>It's nice to meet you</h1>
+						<div className="button-welcome">
+							<button className="btn">TELL ME MORE</button>
 						</div>
 					</div>
 				</div>
-			</section>
+      		</section>
 		)
 	}
 }

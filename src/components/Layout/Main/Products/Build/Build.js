@@ -1,14 +1,14 @@
 /* eslint-disable jsx-a11y/img-redundant-alt */
-import React, { Component } from 'react'
-import './Furnishings.scss';
-import forHouse from '../../../../images/forHouse.jpg';
-import forOffice from '../../../../images/forOffice.jpg';
-import forPublic from '../../../../images/forPublic.jpg';
-import forShop from '../../../../images/forShop.jpg';
-import '../../../../../node_modules/bootstrap/dist/css/bootstrap-reboot.min.css';
-import '../../../../../node_modules/bootstrap/dist/css/bootstrap-reboot.css';
-import '../../../../../node_modules/bootstrap/dist/css/bootstrap.css';
-import '../../../../../node_modules/bootstrap/dist/css/bootstrap.min.css';
+import React, { Component } from 'react';
+import './Build.scss';
+import house from '../../../../../images/house.jpg';
+import werehouse from '../../../../../images/werehouse.jpg';
+import hotel from '../../../../../images/hotel.jpg';
+import cowshed from '../../../../../images/cowshed.jpg';
+import '../../../../../../node_modules/bootstrap/dist/css/bootstrap-reboot.min.css';
+import '../../../../../../node_modules/bootstrap/dist/css/bootstrap-reboot.css';
+import '../../../../../../node_modules/bootstrap/dist/css/bootstrap.css';
+import '../../../../../../node_modules/bootstrap/dist/css/bootstrap.min.css';
 export default class Select extends Component {
 	render() {
 		return (
@@ -19,7 +19,7 @@ export default class Select extends Component {
 							<div className="product-box">
 								<div className="photo">
 									<a src="product-details.html">
-										<img src={forHouse} alt="forHouse"/>
+										<img src={house} alt="cards"/>
 									</a>
 									<div className="sale">sale</div>
 									<div className="buttons">
@@ -31,7 +31,7 @@ export default class Select extends Component {
 									</div>
 								</div>
 								<div className="content">
-									<h5>For House</h5>
+									<h5>House</h5>
 									<div className="stars">
 										<span className="full star"></span> <span className="full star"></span>
 										<span className="star"></span> <span className="star"></span>
@@ -53,7 +53,7 @@ export default class Select extends Component {
 							<div className="product-box">
 							<div className="photo">
 								<a src="product-details.html">
-									<img src={forOffice} alt="forOffice"/>
+									<img src={werehouse} alt="werehouse"/>
 								</a>
 								<div className="sale">sale</div>
 								<div className="buttons">
@@ -64,7 +64,7 @@ export default class Select extends Component {
 								</div>
 							</div>
 							<div className="content">
-								<h5>For Office</h5>
+								<h5>Werehouse</h5>
 								<div className="stars">
 									<span className="full star"></span> <span className="full star"></span>
 									<span className="star"></span> <span className="star"></span>
@@ -90,7 +90,7 @@ export default class Select extends Component {
 							<div className="product-box">
 								<div className="photo">
 									<a src="product-details.html">
-										<img src={forPublic} alt="forPublic"/>
+										<img src={hotel} alt="hotel"/>
 									</a>
 									<div className="sale">sale</div>
 										<div className="buttons">
@@ -100,7 +100,7 @@ export default class Select extends Component {
 									</div>
 								</div>
 								<div className="content">
-									<h5>For Public</h5>
+									<h5>Hotel</h5>
 									<div className="stars">
 										<span className="full star"></span> <span className="full star"></span>
 										<span className="star"></span> <span className="star"></span>
@@ -127,7 +127,7 @@ export default class Select extends Component {
 							<div className="product-box">
 								<div className="photo">
 									<a src="product-details.html">
-										<img src={forShop} alt="forShop"/>
+										<img src={cowshed} alt="cowshed"/>
 									</a>
 									<div className="sale">sale</div>
 									<div className="buttons">
@@ -139,7 +139,7 @@ export default class Select extends Component {
 									</div>
 								</div>
 								<div className="content">
-									<h5>For Shop</h5>
+									<h5>Cowshed</h5>
 									<div className="stars">
 										<span className="full star"></span> <span className="full star"></span>
 										<span className="star"></span> <span className="star"></span>

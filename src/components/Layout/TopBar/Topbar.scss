@@ -3,65 +3,123 @@
 @import '../../../sass/Additionalcomponents/button';
 @import '../../../sass/bootstrap/bootstrap.scss';
 
-.top-bar {
-	background-color: $header-topbar-bg;
+.background {
+	height: 690px;
+	background-image: url("../../../images//backgroundheader.png");
+	background-position: center;
+	background-repeat: no-repeat;
+	text-align: center;
+	position: relative;
+	background-size: cover;
+}
 
-	.top-bar-mobile-lang {
-		@media (max-width: 576px) {
-			width: 60%;
-		}
-	}
+.about {
+	text-align: center;
+	width: 100%;
+	margin: 0 auto;
+}
 
-	.top-bar-mobile-user {
-		@media (max-width: 576px) {
-			width: 40%;
+.topbar {
+	font-size: 14px;
+	font-weight: 400;
+	line-height: 41px;
+	float: right;
+	text-transform: uppercase;
+	padding-top: 20px;
+	z-index: 1;
+	position: absolute;
+	right: 0;
+	top: 0;
+
+	.toggle-btn {
+		cursor: pointer;
+		float: right;
+		position: relative;
+		display: none;
+
+		span {
+			display: block;
+			width: 30px;
+			height: 5px;
+			background: $white-color;
+			margin: 5px 0;
 		}
 	}
 
 	ul {
-		list-style: none;
-		margin: 0;
-		padding: 0;
-
 		li {
-			display: inline-block;
-			line-height: 55px;
+			display: block;
+			float: left;
+		}
 
-			a {
-				color: $font-button-color;
-				font-size: 13px;
+		a {
+			float: right;
+			color: $topbar-a-color;
+			text-align: center;
+			padding: 0 16px;
+			text-decoration: none;
+			font-size: 17px;
 
-				&:hover {
-					@extend .hover-duration;
-					@extend .hover-text;
-					color: $primary;
-					text-decoration: none;
-				}
+			&:hover {
+				color: $orange-color;
+			}
 
-				p {
-					display: inline-block;
-
-					@media (max-width: 576px) {
-						display: none;
-					}
-				}
+			&.active {
+				color: $white-color;
 			}
 		}
 	}
+}
 
-	.text-left ul li {
-		margin-right: 1.5rem;
+.btn {
+    width: 240px;
+    height: 65px;
+    background-color: $orange-color;
+    color: $white-color;
+    font-size: 18px;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin-bottom: 100px;
 
-		i {
-			margin-left: 5px;
-		}
+}
+
+// hamburger button
+.button-container {
+	display: inline-block;
+	width: 100%;
+	padding: 20px 10px 10px;
+}
+
+.button-container h3 {
+	display: inline;
+}
+
+.welcome {
+	margin-top: 100px;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+
+	h1 {
+		color: $white-color;
+		font-family: $font-montserrat;
+		font-size: 55px;
+		font-weight: 700;
+		text-transform: uppercase;
+		width: 100%;
 	}
 
-	.text-right ul li {
-		margin-left: 1.5rem;
+	h3 {
+		color: $white-color;
+		font-family: $font-PT;
+		font-size: 40px;
+		letter-spacing: -1px;
+		margin-bottom: 27px;
+		font-weight: 400;
+	}
 
-		i {
-			margin-right: 5px;
-		}
+	.button-welcome {
+		padding-top: 37.6px;
 	}
 }

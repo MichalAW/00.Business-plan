@@ -3,12 +3,9 @@ import Footer from '../Layout/Footer/Footer';
 import Menubar from '../Layout/MenuBar/Menubar';
 import Midbar from '../Layout/Midbar/Midbar';
 import Topbar from '../Layout/Topbar/Topbar';
-import PanelBar from '../Layout/PanelBar/PanelBar';
-import Build from '../Layout/Products/Build/Build';
-import Furnishings from '../Layout/Products/Furnishings/Furnishings';
-import Installation from '../Layout/Products/Installation/Installation';
-import Machine from '../Layout/Products/Machine/Machine';
+import Main from '../Layout/Main/Main';
 import HomeContent from '../HomeContent/HomeContent';
+import Sorter from '../Utils/Sorter/Sorter';
 
 export default class Home extends Component {
   	render() {
@@ -19,11 +16,8 @@ export default class Home extends Component {
 					<Midbar/>
 					<Menubar/>
 				</header>
-				<PanelBar/>
-				<Build/>
-				<Furnishings/>
-				<Installation/>
-				<Machine/>
+				<Sorter/>
+				<Main/>
 				<HomeContent/>
 				<Footer/>
 			</div>

@@ -1,14 +1,14 @@
 /* eslint-disable jsx-a11y/img-redundant-alt */
 import React, { Component } from 'react'
 import './Machine.scss';
-import car from '../../../../images/car.jpg';
-import tractor from '../../../../images/tractor.jpg';
-import factory from '../../../../images/factory.jpg';
-import forklift from '../../../../images/forklift.jpg';
-import '../../../../../node_modules/bootstrap/dist/css/bootstrap-reboot.min.css';
-import '../../../../../node_modules/bootstrap/dist/css/bootstrap-reboot.css';
-import '../../../../../node_modules/bootstrap/dist/css/bootstrap.css';
-import '../../../../../node_modules/bootstrap/dist/css/bootstrap.min.css';
+import car from '../../../../../images/car.jpg';
+import tractor from '../../../../../images/tractor.jpg';
+import factory from '../../../../../images/factory.jpg';
+import forklift from '../../../../../images/forklift.jpg';
+import '../../../../../../node_modules/bootstrap/dist/css/bootstrap-reboot.min.css';
+import '../../../../../../node_modules/bootstrap/dist/css/bootstrap-reboot.css';
+import '../../../../../../node_modules/bootstrap/dist/css/bootstrap.css';
+import '../../../../../../node_modules/bootstrap/dist/css/bootstrap.min.css';
 export default class Select extends Component {
 	render() {
 		return (
