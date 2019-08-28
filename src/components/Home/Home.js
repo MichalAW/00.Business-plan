@@ -12,8 +12,8 @@ export default class Home extends Component {
 		this.midbarReference = React.createRef()
 	}
 
-	onClickAddProductToCart() {
-		this.midbarReference.current.addProductToCart();
+	onClickAddProductToCart(product) {
+		this.midbarReference.current.addProductToCart(product);
 	}
 
   	render() {

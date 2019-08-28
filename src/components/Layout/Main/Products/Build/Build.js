@@ -3,7 +3,6 @@ import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
 import { BrowserRouter, Route, Link, Switch } from 'react-router-dom';
 import posed, { PoseGroup } from 'react-pose';
-import DetailsProduct from '../../../../../containers/RouteTransition/DetailsProduct/DetailsProduct';
 import './Build.scss';
 import house from '../../../../../images/house.jpg';
 import werehouse from '../../../../../images/werehouse.jpg';
@@ -48,8 +47,8 @@ export default class Build extends Component {
 		this.onClickAddToCart = this.onClickAddToCart.bind(this);
 	}
 
-	onClickAddToCart() {
-		this.props.onClickAddProductToCart();
+	onClickAddToCart(product) {
+		this.props.onClickAddProductToCart(product);
 	}
 	render() {
 		return (
@@ -70,19 +69,12 @@ export default class Build extends Component {
 														<div className="sale">Select</div>
 														<div className="buttons">
 															<a src="#" className="btn-main-small box-button">
-																<Link className="box-button" to="/DetailPageComponent">Quick View</Link>
+																<Link className="box-button" to="/product">Quick View</Link>
 															</a>
-															<a onClick={this.onClickAddToCart} className="btn-main-small box-button">
+															<a onClick={() => this.onClickAddToCart(product)} className="btn-main-small box-button">
 																<i className="fa fa-shopping-basket"></i>
 																ADD TO CART
 															</a>
-															<PoseGroup>
-																<RouteContainer key={location.key}>
-																	<Switch location={location}>
-																		<Route exact path="/DetailsProduct" component={DetailsProduct}/>
-																	</Switch>
-																</RouteContainer>
-															</PoseGroup>
 														</div>
 													</div>
 													<div className="content">

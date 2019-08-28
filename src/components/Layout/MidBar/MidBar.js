@@ -10,12 +10,26 @@ export default class Select extends Component {
 	constructor(props) {
 		super(props);
 		this.addProductToCart = this.addProductToCart.bind(this);
+
+		let products = JSON.parse(localStorage.getItem('products'));
+
+		if (!products) {
+			products = []
+		};
+
 		this.state = {
-			cartCount: 0
+			cartCount: products.length
 		}
 	}
 
-	addProductToCart() {
+	addProductToCart(product) {
+		let products = JSON.parse(localStorage.getItem('products'));
+
+		if (!products) {
+			products = []
+		};
+
+		localStorage.setItem('products', JSON.stringify([...products, product]))
 		this.setState({
 			cartCount: this.state.cartCount + 1
 		})
