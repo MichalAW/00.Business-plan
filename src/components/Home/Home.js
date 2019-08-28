@@ -6,15 +6,25 @@ import Main from '../Layout/Main/Main';
 import Sorter from '../Utils/Sorter/Sorter';
 
 export default class Home extends Component {
+	constructor(props) {
+		super(props);
+		this.onClickAddProductToCart= this.onClickAddProductToCart.bind(this);
+		this.midbarReference = React.createRef()
+	}
+
+	onClickAddProductToCart() {
+		this.midbarReference.current.addProductToCart();
+	}
+
   	render() {
 		return (
 			<div>
 				<header>
 					<Topbar/>
-					<Midbar/>
+					<Midbar ref={this.midbarReference}/>
 				</header>
 				<Sorter/>
-				<Main/>
+				<Main onClickAddProductToCart={this.onClickAddProductToCart}/>
 				<Footer/>
 			</div>
 		)

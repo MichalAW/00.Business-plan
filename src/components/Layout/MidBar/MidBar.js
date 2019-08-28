@@ -1,5 +1,5 @@
 /* eslint-disable jsx-a11y/img-redundant-alt */
-import React, { Component } from 'react'
+import React, { Component } from 'react';
 import './Midbar.scss';
 import logo from '../../../images/logo.jpg';
 import '../../../../node_modules/bootstrap/dist/css/bootstrap-reboot.min.css';
@@ -7,6 +7,19 @@ import '../../../../node_modules/bootstrap/dist/css/bootstrap-reboot.css';
 import '../../../../node_modules/bootstrap/dist/css/bootstrap.css';
 import '../../../../node_modules/bootstrap/dist/css/bootstrap.min.css';
 export default class Select extends Component {
+	constructor(props) {
+		super(props);
+		this.addProductToCart = this.addProductToCart.bind(this);
+		this.state = {
+			cartCount: 0
+		}
+	}
+
+	addProductToCart() {
+		this.setState({
+			cartCount: this.state.cartCount + 1
+		})
+	}
 	render() {
 		return (
 			<section className="mid-bar">
@@ -28,7 +41,7 @@ export default class Select extends Component {
 										<i className="fas fa-shopping-basket"></i>
 									</div>
 									<div className="cart-counter">
-										0
+										{this.state.cartCount}
 									</div>
 								</div>
 							</div>
