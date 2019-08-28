@@ -54,8 +54,8 @@ export default class Topbar extends Component {
 						</div>
 					</div>
 					<div className="welcome">
-						<h3>Welcome to our studio!</h3>
-						<h1>It's nice to meet you</h1>
+						<h3>Welcome to my site!</h3>
+						<h1>Create your Business plan</h1>
 						<div className="button-welcome">
 							<button className="btn">TELL ME MORE</button>
 						</div>

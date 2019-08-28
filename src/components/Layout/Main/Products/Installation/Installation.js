@@ -21,7 +21,7 @@ export default class Select extends Component {
 									<a src="product-details.html">
 										<img src={gas} alt="gas"/>
 									</a>
-									<div className="sale">sale</div>
+									<div className="sale">salect</div>
 									<div className="buttons">
 										<a src="#" className="btn-main-small box-button">Quick View</a>
 										<a src="#" className="btn-main-small box-button">
@@ -44,8 +44,7 @@ export default class Select extends Component {
 										<a src="#" className="btn-outline active"><i className="far fa-heart"></i></a>
 										<a src="#" className="btn-outline"><i className="fas fa-exchange-alt"></i></a>
 									</div>
-									<div className="old-price">$ 35.00</div>
-									<div className="price"><div className="btn-main-small price">$ 30.00</div></div>
+									<div className="price"><div className="btn-main-small price">$ 10.00</div></div>
 								</div>
 							</div>
 						</div>
@@ -55,7 +54,7 @@ export default class Select extends Component {
 								<a src="product-details.html">
 									<img src={electric} alt="electric"/>
 								</a>
-								<div className="sale">sale</div>
+								<div className="sale">Select</div>
 								<div className="buttons">
 									<a src="#" className="btn-main-small box-button">Quick View</a>
 									<a src="#" className="btn-main-small box-button">
@@ -81,7 +80,6 @@ export default class Select extends Component {
 											<i className="fas fa-exchange-alt"></i>
 										</a>
 									</div>
-									<div className="old-price">$ 35.00</div>
 									<div className="price"><div className="btn-main-small price">$ 30.00</div></div>
 								</div>
 							</div>
@@ -92,7 +90,7 @@ export default class Select extends Component {
 									<a src="product-details.html">
 										<img src={security} alt="security"/>
 									</a>
-									<div className="sale">sale</div>
+									<div className="sale">Select</div>
 										<div className="buttons">
 											<a src="#" className="btn-main-small box-button">Quick View</a>
 											<a src="#" className="btn-main-small box-button">
@@ -118,7 +116,7 @@ export default class Select extends Component {
 										</a>
 									</div>
 									<div className="price">
-										<div className="btn-main-small price">$ 30.00</div>
+										<div className="btn-main-small price">$ 40.00</div>
 									</div>
 								</div>
 							</div>
@@ -129,7 +127,7 @@ export default class Select extends Component {
 									<a src="product-details.html">
 										<img src={satelite} alt="satelite"/>
 									</a>
-									<div className="sale">sale</div>
+									<div className="sale">Select</div>
 									<div className="buttons">
 										<a src="#" className="btn-main-small box-button">Quick View</a>
 										<a src="#" className="btn-main-small box-button">
@@ -157,7 +155,7 @@ export default class Select extends Component {
 										</a>
 									</div>
 									<div className="price">
-										<div className="btn-main-small price">$ 30.00</div>
+										<div className="btn-main-small price">$ 20.00</div>
 									</div>
 								</div>
 							</div>
@@ -173,7 +171,7 @@ export default class Select extends Component {
 										alt="duza sofa"
 									/>
 								</a>
-								<div className="sale">sale</div>
+								<div className="sale">Select</div>
 								<div className="buttons">
 									<a src="#" className="btn-main-small box-button">Quick View</a>
 									<a src="#" className="btn-main-small box-button">
@@ -211,7 +209,7 @@ export default class Select extends Component {
 											alt="skandynawskie meble"
 										/>
 									</a>
-									<div className="sale">sale</div>
+									<div className="sale">Select</div>
 									<div className="buttons">
 										<a src="#" className="btn-main-small box-button">Quick View</a>
 										<a src="#" className="btn-main-small box-button">
@@ -234,7 +232,7 @@ export default class Select extends Component {
 										<a src="#" className="btn-outline active"><i className="far fa-heart"></i></a>
 										<a src="#" className="btn-outline"><i className="fas fa-exchange-alt"></i></a>
 									</div>
-									<div className="price"><div className="btn-main-small price">$ 30.00</div></div>
+									<div className="price"><div className="btn-main-small price">$ 40.00</div></div>
 								</div>
 							</div>
 						</div>
