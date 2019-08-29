@@ -15,22 +15,22 @@ export const PanelBar = props => {
 							<nav>
 								<ul>
 									<li className="active accordion">
-										<NavLink exact to="./Build" activeClassName="active">
+										<NavLink exact to="/Build" activeClassName="active">
 											Build
 										</NavLink>
 									</li>
 									<li className="accordion">
-										<NavLink exact to="./Furnishings" activeClassName="active">
+										<NavLink exact to="/Furnishings" activeClassName="active">
 											Furnishings
 										</NavLink>
 									</li>
 									<li className="accordion">
-										<NavLink exact to="./Installation" activeClassName="active">
+										<NavLink exact to="/Installation" activeClassName="active">
 											Installation
 										</NavLink>
 									</li>
 									<li className="accordion">
-										<NavLink exact to="./Machine" activeClassName="active">
+										<NavLink exact to="/Machine" activeClassName="active">
 											Machine
 										</NavLink>
 									</li>
@@ -41,25 +41,25 @@ export const PanelBar = props => {
 							<ul>
 								<li>
 									<a src="#" className="active">
-										<NavLink exact to="./Build" activeClassName="active">
+										<NavLink exact to="/Build" activeClassName="active">
 										</NavLink>
 									</a>
 								</li>
 								<li>
 									<a src="#">
-										<NavLink exact to="./Furnishings" activeClassName="active">
+										<NavLink exact to="/Furnishings" activeClassName="active">
 										</NavLink>
 									</a>
 								</li>
 								<li>
 									<a src="#">
-										<NavLink exact to="./Installation" activeClassName="active">
+										<NavLink exact to="/Installation" activeClassName="active">
 										</NavLink>
 									</a>
 								</li>
 								<li>
 									<a src="#">
-										<NavLink exact to="./Machine" activeClassName="active">
+										<NavLink exact to="/Machine" activeClassName="active">
 										</NavLink>
 									</a>
 								</li>

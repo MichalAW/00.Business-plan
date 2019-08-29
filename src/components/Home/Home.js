@@ -9,11 +9,17 @@ export default class Home extends Component {
 	constructor(props) {
 		super(props);
 		this.onClickAddProductToCart= this.onClickAddProductToCart.bind(this);
-		this.midbarReference = React.createRef()
+		this.midbarReference = React.createRef();
+		this.mainReference = React.createRef();
+		this.onChangeSort = this.onChangeSort.bind(this);
 	}
 
 	onClickAddProductToCart(product) {
 		this.midbarReference.current.addProductToCart(product);
+	}
+
+	onChangeSort(sortName) {
+		this.mainReference.current.onChangeSort(sortName);
 	}
 
   	render() {
@@ -23,8 +29,8 @@ export default class Home extends Component {
 					<Topbar/>
 					<Midbar ref={this.midbarReference}/>
 				</header>
-				<Sorter/>
-				<Main onClickAddProductToCart={this.onClickAddProductToCart}/>
+				<Sorter onChangeSort={this.onChangeSort}/>
+				<Main ref={this.mainReference} onClickAddProductToCart={this.onClickAddProductToCart}/>
 				<Footer/>
 			</div>
 		)

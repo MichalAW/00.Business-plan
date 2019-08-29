@@ -44,8 +44,7 @@ export default class Topbar extends Component {
 									</div>
 									<ul>
 										<li><a className="active" href="#">Home</a></li>
-										<li><a href="#">Services</a></li>
-										<li><a href="#">Portfolio</a></li>
+										<li><a href="#">Faq</a></li>
 										<li><a href="#">About</a></li>
 										<li><a href="#">Contact</a></li>
 									</ul>
