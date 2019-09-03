@@ -4,7 +4,7 @@ import Midbar from '../Layout/Midbar/Midbar';
 import Topbar from '../Layout/Topbar/Topbar';
 import Main from '../Layout/Main/Main';
 import Sorter from '../Utils/Sorter/Sorter';
-
+import ShoppingCart from '../Utils/ShoppingCart/ShoppingCart';
 export default class Home extends Component {
 	constructor(props) {
 		super(props);
@@ -31,6 +31,7 @@ export default class Home extends Component {
 				</header>
 				<Sorter onChangeSort={this.onChangeSort}/>
 				<Main ref={this.mainReference} onClickAddProductToCart={this.onClickAddProductToCart}/>
+				<ShoppingCart/>
 				<Footer/>
 			</div>
 		)

@@ -3,168 +3,171 @@
 @import '../../../sass/Additionalcomponents/button';
 @import '../../../sass/bootstrap/bootstrap.scss';
 
-.product-box {
-	background-color: $font-button-color;
-	border: 1px solid #e1e1e1;
-	margin-bottom: 2rem;
-
-	.box-button {
-		visibility: hidden;
-	}
-
-	&:hover .box-button {
-		color: $font-button-color;
-		text-decoration: none;
-		visibility: visible;
-		transition: all 2s;
-		cursor: pointer;
-	}
-
-	&:hover .price {
-		transition: all 1s;
-		background-color: $primary;
-	}
-
-	.photo {
-		img {
-			max-width: 100%;
-			padding: 0;
-			margin: 0;
-		}
-
-		position: relative;
-		padding: 10px 10px 0;
-
-		background: {
-			color: #f4f5f7;
-			size: contain;
-			position: center;
-			repeat: no-repeat;
-		}
-
-		overflow: hidden;
-		align-items: flex-end;
-
-		.sale {
-			position: absolute;
-			top: -30px;
-			left: 50%;
-			transform: translateX(-50%);
-			background-color: $form-border-color;
-			border-radius: 50%;
-			color: $font-button-color;
-			padding: 30px 15px 5px 15px;
-		}
-
-		.buttons {
+.section--product {
 			display: flex;
-			justify-content: space-between;
-		}
-	}
+	.product-box {
+		background-color: $font-button-color;
+		border: 1px solid #e1e1e1;
+		margin-bottom: 2rem;
 
-	.content {
-		text-align: center;
-		padding: 20px;
-
-		h5 {
-			color: $primary;
-			font-size: 16px;
-			line-height: 24px;
-			letter-spacing: 1px;
+		.box-button {
+			visibility: hidden;
 		}
 
-		.stars {
-			span {
-				text-decoration: none;
-				color: rgb(42, 42, 42);
+		&:hover .box-button {
+			color: $font-button-color;
+			text-decoration: none;
+			visibility: visible;
+			transition: all 2s;
+			cursor: pointer;
+		}
 
-				// @extend .fa-star;
+		&:hover .price {
+			transition: all 1s;
+			background-color: $primary;
+		}
 
-				// &.full {
-				// 	@extend .fas;
-				// }
+		.photo {
+			img {
+				max-width: 100%;
+				padding: 0;
+				margin: 0;
+			}
 
-				&.hover-on {
-					font-weight: 900;
-					color: $primary;
-				}
+			position: relative;
+			padding: 10px 10px 0;
 
-				&.rated-star {
-					font-weight: 900;
-					color: $primary;
+			background: {
+				color: #f4f5f7;
+				size: contain;
+				position: center;
+				repeat: no-repeat;
+			}
+
+			overflow: hidden;
+			align-items: flex-end;
+
+			.sale {
+				position: absolute;
+				top: -30px;
+				left: 50%;
+				transform: translateX(-50%);
+				background-color: $form-border-color;
+				border-radius: 50%;
+				color: $font-button-color;
+				padding: 30px 15px 5px 15px;
+			}
+
+			.buttons {
+				display: flex;
+				justify-content: space-between;
+			}
+		}
+
+		.content {
+			text-align: center;
+			padding: 20px;
+
+			h5 {
+				color: $primary;
+				font-size: 16px;
+				line-height: 24px;
+				letter-spacing: 1px;
+			}
+
+			.stars {
+				span {
+					text-decoration: none;
+					color: rgb(42, 42, 42);
+
+					// @extend .fa-star;
+
+					// &.full {
+					// 	@extend .fas;
+					// }
+
+					&.hover-on {
+						font-weight: 900;
+						color: $primary;
+					}
+
+					&.rated-star {
+						font-weight: 900;
+						color: $primary;
+					}
 				}
 			}
 		}
-	}
 
-	.line {
-		margin: 0 10px;
-		border-bottom: 1px solid $text-color;
-		position: relative;
+		.line {
+			margin: 0 10px;
+			border-bottom: 1px solid $text-color;
+			position: relative;
 
-		&::before {
-			content: "";
-			position: absolute;
-			bottom: -1px;
-			left: 50%;
-			width: 30px;
-			border-bottom: 4px solid $primary;
-			transform: translateX(-50%);
+			&::before {
+				content: "";
+				position: absolute;
+				bottom: -1px;
+				left: 50%;
+				width: 30px;
+				border-bottom: 4px solid $primary;
+				transform: translateX(-50%);
+			}
+		}
+
+		.actions {
+			padding: 15px 10px 10px 10px;
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+		}
+
+		.old-price {
+			color: $product-old-price-color;
+			font-size: 14px;
+			text-align: right;
+			text-decoration: line-through black;
+			width: 65px;
 		}
 	}
 
-	.actions {
-		padding: 15px 10px 10px 10px;
-		display: flex;
-		justify-content: space-between;
-		align-items: center;
+	//Tabs connected to js code
+	.items_active {
+		display: none;
 	}
 
-	.old-price {
-		color: $product-old-price-color;
-		font-size: 14px;
-		text-align: right;
-		text-decoration: line-through black;
-		width: 65px;
-	}
-}
-
-//Tabs connected to js code
-.items_active {
-	display: none;
-}
-
-.show {
-	display: inline-flex;
-	animation: fadein 2s;
-}
-
-@keyframes fadein {
-	from {
-		opacity: 0;
+	.show {
+		display: inline-flex;
+		animation: fadein 2s;
 	}
 
-	to {
-		opacity: 1;
+	@keyframes fadein {
+		from {
+			opacity: 0;
+		}
+
+		to {
+			opacity: 1;
+		}
 	}
-}
 
-.post-summary {
-	border-bottom: 1px solid $color-textfield-border;
-	padding: $base-size;
-	margin-bottom: $base-size;
-	margin-left: -$base-size;
-	transition: .2s;
-	cursor: pointer;
-	background-color: $light-white;
-	font-family: $font-header;
-}
+	.post-summary {
+		border-bottom: 1px solid $color-textfield-border;
+		padding: $base-size;
+		margin-bottom: $base-size;
+		margin-left: -$base-size;
+		transition: .2s;
+		cursor: pointer;
+		background-color: $light-white;
+		font-family: $font-header;
+	}
 
-.post-summary:hover {
-	margin-left: -$base-size*2;
-	margin-top: -$base-size / 5;
-	border-radius: $radius;
-	box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
-	padding-left: $base-size * 1.5;
-	background-color: $orange-color;
+	.post-summary:hover {
+		margin-left: -$base-size*2;
+		margin-top: -$base-size / 5;
+		border-radius: $radius;
+		box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+		padding-left: $base-size * 1.5;
+		background-color: $orange-color;
+	}
 }

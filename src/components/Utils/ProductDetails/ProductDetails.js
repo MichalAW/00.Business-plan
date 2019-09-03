@@ -32,7 +32,7 @@ export default class ProductDetails extends Component {
 									this.props.products.filter((product) => product.id.toString() === this.props.match.params.productId).map(product => {
 										return (
 											<div>
-												<div className="col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
+												<div className="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
 													<div className="product-box">
 														<div className="photo">
 															<a src="product-details.html">
@@ -51,6 +51,15 @@ export default class ProductDetails extends Component {
 														</div>
 														<div className="content">
 															<h5>{product.name}</h5>
+															<div className="post-summary">
+																<h2>More Details</h2>
+																<p>We'll provide support for...</p>
+																<ul>
+																	<li>Preparing income for last and currentt year</li>
+																	<li>Preparing depreciation write-offs</li>
+																	<li>Contact between accounting and notary</li>
+																</ul>
+															</div>
 														</div>
 														<div className="line"></div>
 														<div className="actions">
@@ -65,15 +74,6 @@ export default class ProductDetails extends Component {
 													</div>
 												</div>
 												<div className="col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
-													<div className="post-summary">
-														<h2>More Details</h2>
-														<p>We'll provide support for...</p>
-														<ul>
-															<li>Preparing income for last and currentt year</li>
-															<li>Preparing depreciation write-offs</li>
-															<li>Contact betweenr accounting and notary</li>
-														</ul>
-													</div>
 												</div>
 											</div>
 										)
@@ -87,29 +87,3 @@ export default class ProductDetails extends Component {
 		)
 	}
 }
-
-
-// export default class DetailsProduct extends Component {
-// 	render() {
-// 		return (
-// 			<Container className="Details">
-				// <h2>More Details</h2>
-				// <p>Prepare so sent us income for last year and currentt year on mail: revenue.wanta-site@gmail.com</p>
-				// <p>
-// 				Lorem Ipsum has been the industry's standard dummy text ever since the
-// 				1500s, when an unknown printer took a galley of type and scrambled it to
-// 				make a type specimen book.
-// 				</p>
-// 				<P>
-// 				It has survived not only five centuries, but also the leap into electronic
-// 				typesetting, remaining essentially unchanged.
-// 				</P>
-// 				<P>
-// 				It was popularised in the 1960s with the release of Letraset sheets
-// 				containing Lorem Ipsum passages, and more recently with desktop publishing
-// 				software like Aldus PageMaker including versions of Lorem Ipsum.
-// 				</P>
-// 			</Container>
-// 		)
-// 	}
-// }
