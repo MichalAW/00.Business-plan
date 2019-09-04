@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { BrowserRouter, Switch, Route } from "react-router-dom";
 import { MainNavigation } from "../MainNavigation/MainNavigation";
 import ProductDetails from '../../Utils/ProductDetails/ProductDetails';
-
+import ShoppingCart from '../../../components/Utils/ShoppingCart/ShoppingCart';
 import Build from './Products/Build/Build';
 import Furnishings from './Products/Furnishings/Furnishings';
 import Installation from './Products/Installation/Installation';
@@ -219,6 +219,7 @@ export default class Main extends Component {
 							<Route exact path="/furnishings" render={()=><Furnishings products={this.getSortedProducts().filter((product) => product.previousPage === "/furnishings" )} onClickAddProductToCart={this.onClickAddProductToCart}/>}/>
 							<Route exact path="/installation" render={()=><Installation products={this.getSortedProducts().filter((product) => product.previousPage === "/installation" )} onClickAddProductToCart={this.onClickAddProductToCart}/>}/>
 							<Route exact path="/machine" render={()=><Machine products={this.getSortedProducts().filter((product) => product.previousPage === "/machine" )} onClickAddProductToCart={this.onClickAddProductToCart}/>}/>
+							<Route exact path="/cart" render={()=><ShoppingCart products={this.getSortedProducts().filter((product) => product.previousPage === "/cart" )} onClickAddProductToCart={this.onClickAddProductToCart}  refreshProductCart={this.props.refreshProductCart}/>}/>
 						</Switch>
 					</MainNavigation>
 				</BrowserRouter>

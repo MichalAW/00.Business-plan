@@ -1,16 +1,13 @@
 @import url("https://fonts.googleapis.com/css?family=Nunito+Sans:400,800");
-
-body {
-	font-family: "Nunito Sans", sans-serif;
-	background: #f9f9f9;
-}
+@import '../../../sass/variables';
 
 .Cart {
-	max-width: 800px;
+	background-image: url("../../../images/backgroundcontact.jpg");
 	display: block;
 	margin: auto;
 	font-family: "Nunito Sans", sans-serif;
 	font-weight: 800;
+	color: $white-color;
 }
 
 .Cart ul {
@@ -51,7 +48,7 @@ body {
 	border: 10px solid #0e5c2c;
 	box-shadow: 0px 2px 9px rgba(0, 0, 0, 0.2);
 	border-radius: 6px 0 0 0;
-	padding: 10px 20px;
+	padding: 10px 10px;
 }
 
 .cartColor {
@@ -65,6 +62,10 @@ body {
 .cartColorImport {
 	width: 80px;
 	float: right;
+}
+
+.cart-container {
+	padding: 20px 0;
 }
 
 .wall {
@@ -205,4 +206,47 @@ button:active {
 	border-radius: 6px;
 	color: #000;
 	background: linear-gradient(270deg, #ff3d00 -13.97%, #ffa800 105.15%);
+}
+
+.contact-background {
+	background-position: center;
+	background-repeat: no-repeat;
+	text-align: center;
+	position: relative;
+	background-size: cover;
+}
+
+.contact {
+	h6 {
+		padding: 50px 0 0;
+		color: $white-color;
+		text-transform: uppercase;
+		font-weight: 700;
+		font-size: 40px;
+		letter-spacing: -1px;
+	}
+
+	p {
+		font-size: 16px;
+		color: $grey-paragraph;
+		font-weight: 400;
+		font-style: italic;
+		font-family: "Nunito Sans" sans-serif;
+	}
+}
+
+.btn-background {
+	padding-top: 11px;
+}
+
+.btn {
+	width: 240px;
+	height: 65px;
+	background-color: $orange-color;
+	color: $white-color;
+	font-size: 18px;
+	font-weight: 700;
+	text-transform: uppercase;
+	margin-bottom: 100px;
+
 }

@@ -4,25 +4,31 @@ import Midbar from '../Layout/Midbar/Midbar';
 import Topbar from '../Layout/Topbar/Topbar';
 import Main from '../Layout/Main/Main';
 import Sorter from '../Utils/Sorter/Sorter';
-import ShoppingCart from '../Utils/ShoppingCart/ShoppingCart';
+
 export default class Home extends Component {
 	constructor(props) {
-		super(props);
-		this.onClickAddProductToCart= this.onClickAddProductToCart.bind(this);
-		this.midbarReference = React.createRef();
-		this.mainReference = React.createRef();
-		this.onChangeSort = this.onChangeSort.bind(this);
-	}
+		super(props)
+		this.onClickAddProductToCart= this.onClickAddProductToCart.bind(this)
+		this.midbarReference = React.createRef()
+		this.mainReference = React.createRef()
+		this.onChangeSort = this.onChangeSort.bind(this)
+		this.refreshProductCart = this.refreshProductCart.bind(this)
+	};
 
 	onClickAddProductToCart(product) {
-		this.midbarReference.current.addProductToCart(product);
-	}
+		this.midbarReference.current.addProductToCart(product)
+	};
 
 	onChangeSort(sortName) {
-		this.mainReference.current.onChangeSort(sortName);
-	}
+		this.mainReference.current.onChangeSort(sortName)
+	};
+
+	refreshProductCart() {
+		this.midbarReference.current.refreshProductCart()
+	};
 
   	render() {
+
 		return (
 			<div>
 				<header>
@@ -30,8 +36,7 @@ export default class Home extends Component {
 					<Midbar ref={this.midbarReference}/>
 				</header>
 				<Sorter onChangeSort={this.onChangeSort}/>
-				<Main ref={this.mainReference} onClickAddProductToCart={this.onClickAddProductToCart}/>
-				<ShoppingCart/>
+				<Main ref={this.mainReference} onClickAddProductToCart={this.onClickAddProductToCart} refreshProductCart={this.refreshProductCart}/>
 				<Footer/>
 			</div>
 		)

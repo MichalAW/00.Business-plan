@@ -31,8 +31,8 @@ export default class ProductDetails extends Component {
 								{
 									this.props.products.filter((product) => product.id.toString() === this.props.match.params.productId).map(product => {
 										return (
-											<div>
-												<div className="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+											<div className="flex-container">
+												<div className="col-xs-12 col-sm-6 col-md-6 col-lg-6 col-xl-6">
 													<div className="product-box">
 														<div className="photo">
 															<a src="product-details.html">
@@ -51,15 +51,6 @@ export default class ProductDetails extends Component {
 														</div>
 														<div className="content">
 															<h5>{product.name}</h5>
-															<div className="post-summary">
-																<h2>More Details</h2>
-																<p>We'll provide support for...</p>
-																<ul>
-																	<li>Preparing income for last and currentt year</li>
-																	<li>Preparing depreciation write-offs</li>
-																	<li>Contact between accounting and notary</li>
-																</ul>
-															</div>
 														</div>
 														<div className="line"></div>
 														<div className="actions">
@@ -73,7 +64,17 @@ export default class ProductDetails extends Component {
 														</div>
 													</div>
 												</div>
-												<div className="col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
+												<div className="col-xs-12 col-sm-6 col-md-6 col-lg-6 col-xl-6">
+													<div className="post-summary">
+														<h2>More Details</h2>
+														<p>We'll provide support for...</p>
+														<ul>
+															<li>Preparing income for last and currentt year</li>
+															<li>Preparing depreciation write-offs</li>
+															<li>Contact between accounting and notary</li>
+															<li>Fast documents transfering</li>
+														</ul>
+													</div>
 												</div>
 											</div>
 										)
