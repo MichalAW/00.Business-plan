@@ -1,8 +1,22 @@
 @import url("https://fonts.googleapis.com/css?family=Nunito+Sans:400,800");
 @import '../../../sass/variables';
 
-.Cart {
+
+.contentContainer {
 	background-image: url("../../../images/backgroundcontact.jpg");
+	.Sorter {
+		display: none;
+	}
+	.section--panel_bar {
+		display: none;
+	}
+}
+
+.cart-container {
+	color: $white-color;
+}
+
+.Cart {
 	display: block;
 	margin: auto;
 	font-family: "Nunito Sans", sans-serif;

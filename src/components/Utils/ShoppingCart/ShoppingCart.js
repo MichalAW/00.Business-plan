@@ -1,7 +1,7 @@
 // VARIABLES
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
-
+import { Button, Modal } from 'reactstrap';
 import ProductDetails from '../../Layout/Main/Main';
 
 import './ShoppingCart.scss';
@@ -15,7 +15,8 @@ export default class ShoppingCart extends Component {
 		let products = JSON.parse(localStorage.getItem('products'));
 
 		this.removeSingleProduct = this.removeSingleProduct.bind(this);
-		this.addProductToCart = this.addProductToCart.bind(this)
+		this.addProductToCart = this.addProductToCart.bind(this);
+		this.showModalOnButton = this.showModalOnButton.bind(this);
 
 		if (!products) {
 			products = []
@@ -76,11 +77,46 @@ export default class ShoppingCart extends Component {
 		})
 	}
 
+	sumAppProductPrice(price) {
+		const newPrice = this.state.cart.find(p => p.price === price)
+		const newCart = [...this.state.cart, newPrice]
+
+		localStorage.setItem('price', JSON.stringify(newCart))
+
+		this.props.refreshProductCart()
+		this.setState({
+			cart: newCart
+		})
+	}
+
+	showModalOnButton() {
+		const [show, setShow] = React.useState(false);
+
+		const handleClose = () => setShow(false);
+
+		this.props.refreshProductCart()
+
+		return (
+			<div>
+				<Modal show={show} onHide={handleClose}>
+					<Modal.Header closeButton>
+						<Modal.Title>Thank you for buy!</Modal.Title>
+					</Modal.Header>
+					<Modal.Body>Wait two days till we prepare your Business plan and send to your e-mail</Modal.Body>
+					<Modal.Footer>
+					<Button variant="secondary" onClick={handleClose}>
+						Close
+					</Button>
+					</Modal.Footer>
+				</Modal>
+			</div>
+		);
+	}
+
+
 	render () {
 		console.log(this.state.cart)
-		let name = '';
 		let currentImport = '';
-		let hex = '';
 
 		return (
 			<div>
@@ -89,7 +125,7 @@ export default class ShoppingCart extends Component {
 						<div>
 							<div className="cart-container">
 								<li key={index}>
-									<span className="cartColor" style={{ background: hex }}>{product.name}</span>
+									<span className="cartColor">{product.name}</span>
 									<span className="cartColorQty"> x{product.count}</span>
 									<button onClick={() => this.addProductToCart(product.id)}>
 									➕
@@ -97,7 +133,7 @@ export default class ShoppingCart extends Component {
 									<button onClick={() => this.removeSingleProduct(product.id)}>
 									➖
 									</button>
-									<span className="cartColorImport"> ${currentImport}</span>
+									<span className="cartColorImport"> ${product.price}</span>
 									<button onClick={() => this.removeProductFromCart(product.id)}>🗑</button>
 								</li>
 							</div>
@@ -130,7 +166,7 @@ export default class ShoppingCart extends Component {
 												</div>
 												<div className="subject">
 													<label for="inputSubject"></label>
-													<input type="text" className="form-control" id="inputSubject" placeholder="SUBJECT" required=""></input>
+													<input type="text" className="form-control" id="inputDiscount" placeholder="DISCOUNT CODE*" required=""></input>
 												</div>
 											</div>
 											<div className="col-sm-6 col-xs-12">
@@ -145,7 +181,7 @@ export default class ShoppingCart extends Component {
 										<div className="row">
 											<div className="col-sm-12 col-xs-12">
 												<div className="form-group">
-													<input className="btn btn-send" type="submit" value="BUY"></input>
+													<input className="btn btn-send" type="submit" value="BUY" onClick={() => this.showModalOnButton()}></input>
 												</div>
 											</div>
 										</div>

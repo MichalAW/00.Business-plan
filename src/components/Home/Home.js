@@ -35,8 +35,10 @@ export default class Home extends Component {
 					<Topbar/>
 					<Midbar ref={this.midbarReference}/>
 				</header>
-				<Sorter onChangeSort={this.onChangeSort}/>
-				<Main ref={this.mainReference} onClickAddProductToCart={this.onClickAddProductToCart} refreshProductCart={this.refreshProductCart}/>
+				<section className="contentContainer">
+					<Sorter onChangeSort={this.onChangeSort}/>
+					<Main ref={this.mainReference} onClickAddProductToCart={this.onClickAddProductToCart} refreshProductCart={this.refreshProductCart}/>
+				</section>
 				<Footer/>
 			</div>
 		)
