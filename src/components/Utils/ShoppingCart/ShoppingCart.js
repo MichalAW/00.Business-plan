@@ -3,10 +3,8 @@ import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
 import { Button, Modal } from 'reactstrap';
 import ProductDetails from '../../Layout/Main/Main';
-
+import { Link } from 'react-router-dom';
 import './ShoppingCart.scss';
-
-
 
 export default class ShoppingCart extends Component {
 
@@ -89,6 +87,12 @@ export default class ShoppingCart extends Component {
 		})
 	}
 
+	getBackButton = () => (
+		<Link to='/' className='back-button'>
+			&lt; Back to shop
+		</Link>
+	);
+
 	showModalOnButton() {
 		const [show, setShow] = React.useState(false);
 
@@ -113,35 +117,43 @@ export default class ShoppingCart extends Component {
 		);
 	}
 
-
 	render () {
 		console.log(this.state.cart)
 		let currentImport = '';
 
 		return (
-			<div>
+			<div className="section-cart">
 				{this.mergeCart(this.state.cart).map((product, index) => {
 					return (
 						<div>
 							<div className="cart-container">
-								<li key={index}>
-									<span className="cartColor">{product.name}</span>
-									<span className="cartColorQty"> x{product.count}</span>
-									<button onClick={() => this.addProductToCart(product.id)}>
-									➕
-									</button>
-									<button onClick={() => this.removeSingleProduct(product.id)}>
-									➖
-									</button>
-									<span className="cartColorImport"> ${product.price}</span>
-									<button onClick={() => this.removeProductFromCart(product.id)}>🗑</button>
-								</li>
+								<ul>
+									<li key={index}>
+										<span>{product.img}</span>
+										<span className="cartColor">{product.name}</span>
+										<span className="cartColorQty"> x{product.count}</span>
+										<button onClick={() => this.addProductToCart(product.id)}>
+										➕
+										</button>
+										<button onClick={() => this.removeSingleProduct(product.id)}>
+										➖
+										</button>
+										<span className="cartColorImport"> ${product.price}</span>
+										<button onClick={() => this.removeProductFromCart(product.id)}>🗑</button>
+									</li>
+								</ul>
 							</div>
 						</div>
 					)
 
 				})}
+				<div className="total-price">TOTAL PRICE : </div>
 				<div className="contact-background">
+					<div className='back-container'>
+						<Link to={"/build"}>
+							<button className="back-button">back to shop</button>
+						</Link>
+					</div>
 					<section className="container">
 						<div className="contact">
 							<div className="row">
