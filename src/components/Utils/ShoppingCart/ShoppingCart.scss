@@ -1,121 +1,152 @@
 @import url("https://fonts.googleapis.com/css?family=Nunito+Sans:400,800");
 @import '../../../sass/variables';
 
-.section-cart {
-	background-image: url("../../../images/backgroundcontact.jpg");
-	font-style: $font-Open;
-	link {
-		float: right;
+.container {
+	margin: 0 auto;
+
+	.section-cart {
+		background-image: url("../../../images/backgroundcontact.jpg");
+		font-style: $font-Open;
+		color: $white-color;
+
+		link {
+			float: right;
+			margin: auto;
+			display: -webkit-box;
+			display: -ms-flexbox;
+			display: flex;
+			-ms-flex-wrap: wrap;
+			flex-wrap: wrap;
+		}
+
+		.cart-container {
+			padding: 20px 0;
+			display: flex;
+			flex-direction: column;
+
+			ul {
+
+				li {
+					list-style: none;
+					align-items: center;
+
+					.cart-description {
+						display: block;
+						margin: 0 auto;
+					}
+
+					button {
+						margin: 0 30px;
+						border-radius: 30px;
+					}
+
+					img {
+						width: 40px;
+					}
+
+					.shop-button {
+						padding-top: 10px;
+					}
+				}
+
+			}
+		}
+	}
+
+	.back-container {
 		margin: auto;
 		display: -webkit-box;
 		display: -ms-flexbox;
 		display: flex;
 		-ms-flex-wrap: wrap;
 		flex-wrap: wrap;
-	}
-}
 
-.back-container {
-	float: right;
-	margin: auto;
-	display: -webkit-box;
-	display: -ms-flexbox;
-	display: flex;
-	-ms-flex-wrap: wrap;
-	flex-wrap: wrap;
-
-	.back-button {
-		background-color: $black-color;
-		color: $white-color;
-		cursor: pointer;
-		&:hover {
-			color: $header-bg;
+		.back-button {
+			background-color: $black-color;
+			color: $white-color;
+			cursor: pointer;
+			&:hover {
+				color: $header-bg;
+			}
 		}
 	}
-}
 
-.total-price {
-	color: $white-color;
-}
-
-// .contentContainer {
-
-// 	.Sorter {
-// 		display: none;
-// 	}
-// 	.section--panel_bar {
-// 		display: none;
-// 	}
-// }
-
-.back-button {
-	margin: 1rem auto 1rem 1rem;
-	padding: 0.625rem 0;
-}
-
-
-.cart-container {
-	color: $white-color;
-}
-
-
-
-.cartColor {
-	min-width: 90px;
-	padding: 10px 20px;
-	border-radius: 4px;
-	box-shadow: 0px 2px 9px rgba(0, 0, 0, 0.2);
-}
-
-.cartColorQty,
-.cartColorImport {
-	width: 80px;
-	float: right;
-}
-
-.cart-container {
-	padding: 20px 0;
-}
-
-.contact-background {
-	background-position: center;
-	background-repeat: no-repeat;
-	text-align: center;
-	position: relative;
-	background-size: cover;
-}
-
-.contact {
-	h6 {
-		padding: 50px 0 0;
+	.total-price {
 		color: $white-color;
-		text-transform: uppercase;
+	}
+
+	.back-button {
+		margin: 1rem auto 1rem 1rem;
+		padding: 0.625rem 0;
+	}
+
+	.cartColor {
+		min-width: 90px;
+		padding: 10px 20px;
+		border-radius: 4px;
+		box-shadow: 0px 2px 9px rgba(0, 0, 0, 0.2);
+	}
+
+	.contact-background {
+		background-position: center;
+		background-repeat: no-repeat;
+		text-align: center;
+		position: relative;
+		background-size: cover;
+	}
+
+	.contact {
+		.description {
+			text-align: center;
+
+			h6 {
+				padding: 50px 0 0;
+				color: $white-color;
+				text-transform: uppercase;
+				font-weight: 700;
+				font-size: 40px;
+				letter-spacing: -1px;
+			}
+
+			p {
+				font-size: 16px;
+				color: $grey-paragraph;
+				font-weight: 400;
+				font-style: italic;
+				font-family: "Nunito Sans" sans-serif;
+			}
+		}
+	}
+
+	.btn-background {
+		padding-top: 11px;
+	}
+
+	.btn {
+		width: 240px;
+		height: 65px;
+		background-color: $orange-color;
+		color: $white-color;
+		font-size: 18px;
 		font-weight: 700;
-		font-size: 40px;
-		letter-spacing: -1px;
-	}
+		text-transform: uppercase;
+		margin-bottom: 100px;
 
-	p {
-		font-size: 16px;
-		color: $grey-paragraph;
-		font-weight: 400;
-		font-style: italic;
-		font-family: "Nunito Sans" sans-serif;
 	}
 }
 
-.btn-background {
-	padding-top: 11px;
-}
+form {
+	padding: 10px;
+	display: flex;
+	justify-content: center;
 
-.btn {
-	width: 240px;
-	height: 65px;
-	background-color: $orange-color;
-	color: $white-color;
-	font-size: 18px;
-	font-weight: 700;
-	text-transform: uppercase;
-	margin-bottom: 100px;
-
+	input[type="submit"] {
+		border: none;
+		background: $primary;
+		color: white;
+		margin-left: 15px;
+		border-radius: 3px;
+		padding: 0 15px;
+		cursor: pointer;
+	}
 }

@@ -4,22 +4,6 @@ img {
 	width: 100%;
 }
 
-form {
-	padding: 10px;
-	display: flex;
-	justify-content: flex-end;
-
-	input[type="submit"] {
-		border: none;
-		background: $primary;
-		color: white;
-		margin-left: 15px;
-		border-radius: 3px;
-		padding: 0 15px;
-		cursor: pointer;
-	}
-}
-
 #rating-filter {
 	color: white;
 	padding: 5px;
