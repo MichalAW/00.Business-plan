@@ -4,6 +4,7 @@ import { PanelBar } from "../PanelBar/PanelBar";
 
 export class MainNavigation extends React.Component {
 	render() {
+		console.log(this.props)
 		return (
 			<div className="container">
 				<PanelBar/>

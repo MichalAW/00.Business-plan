@@ -40,28 +40,20 @@ export const PanelBar = props => {
 						<div className="col-auto dots">
 							<ul>
 								<li>
-									<a src="#" className="active">
-										<NavLink exact to="/Build" activeClassName="active">
-										</NavLink>
-									</a>
+									<NavLink exact to="/Build" activeClassName="active">
+									</NavLink>
 								</li>
 								<li>
-									<a src="#">
-										<NavLink exact to="/Furnishings" activeClassName="active">
-										</NavLink>
-									</a>
+									<NavLink exact to="/Furnishings" activeClassName="active">
+									</NavLink>
 								</li>
 								<li>
-									<a src="#">
-										<NavLink exact to="/Installation" activeClassName="active">
-										</NavLink>
-									</a>
+									<NavLink exact to="/Installation" activeClassName="active">
+									</NavLink>
 								</li>
 								<li>
-									<a src="#">
-										<NavLink exact to="/Machine" activeClassName="active">
-										</NavLink>
-									</a>
+									<NavLink exact to="/Machine" activeClassName="active">
+									</NavLink>
 								</li>
 							</ul>
 						</div>

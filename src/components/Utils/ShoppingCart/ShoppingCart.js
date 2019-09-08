@@ -1,7 +1,7 @@
 // VARIABLES
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
-import { Button, Modal } from 'reactstrap';
+import { Button, Modal, ModalHeader, ModalFooter, ModalBody } from 'reactstrap';
 import ProductDetails from '../../Layout/Main/Main';
 import { Link } from 'react-router-dom';
 import './ShoppingCart.scss';
@@ -10,19 +10,29 @@ export default class ShoppingCart extends Component {
 
 	constructor(props) {
 		super(props);
-		let products = JSON.parse(localStorage.getItem('products'));
 
+		let products = JSON.parse(localStorage.getItem('products'));
+ 		this.toggle = this.toggle.bind(this);
 		this.removeSingleProduct = this.removeSingleProduct.bind(this);
 		this.addProductToCart = this.addProductToCart.bind(this);
-		this.showModalOnButton = this.showModalOnButton.bind(this);
+		this.onClickBuy = this.onClickBuy.bind(this);
+		this.onChangeDiscount = this.onChangeDiscount.bind(this);
 
 		if (!products) {
 			products = []
 		};
 
 		this.state = {
-			cart: products
+			cart: products,
+			modal: false,
+			discount: 1
 		}
+	}
+
+	toggle() {
+		this.setState(prevState => ({
+			modal: !prevState.modal
+		}));
 	}
 
 	mergeCart(cart) {
@@ -75,16 +85,13 @@ export default class ShoppingCart extends Component {
 		})
 	}
 
-	sumAppProductPrice(price) {
-		const newPrice = this.state.cart.find(p => p.price === price)
-		const newCart = [...this.state.cart, newPrice]
+	sumUpProductPrice() {
 
-		localStorage.setItem('price', JSON.stringify(newCart))
+		if ( this.state.cart.length === 0 ) {
+			return 0
+		}
 
-		this.props.refreshProductCart()
-		this.setState({
-			cart: newCart
-		})
+		return this.state.discount * this.state.cart.map((product) => product.price).reduce((product1, product2) => product1 + product2)
 	}
 
 	getBackButton = () => (
@@ -93,33 +100,31 @@ export default class ShoppingCart extends Component {
 		</Link>
 	);
 
-	showModalOnButton() {
-		const [show, setShow] = React.useState(false);
+	onClickBuy() {
 
-		const handleClose = () => setShow(false);
+		this.toggle();
+		this.setState({
+			cart: []
+		})
 
+		localStorage.setItem('products', JSON.stringify([]))
 		this.props.refreshProductCart()
+	}
 
-		return (
-			<div>
-				<Modal show={show} onHide={handleClose}>
-					<Modal.Header closeButton>
-						<Modal.Title>Thank you for buy!</Modal.Title>
-					</Modal.Header>
-					<Modal.Body>Wait two days till we prepare your Business plan and send to your e-mail</Modal.Body>
-					<Modal.Footer>
-					<Button variant="secondary" onClick={handleClose}>
-						Close
-					</Button>
-					</Modal.Footer>
-				</Modal>
-			</div>
-		);
+	onChangeDiscount(event) {
+
+		if ( event.target.value === "ZXCVBNM" ) {
+			this.setState({
+				discount: 0.8
+			})
+		} else {
+			this.setState({
+				discount: 1
+			})
+		}
 	}
 
 	render () {
-		console.log(this.state.cart)
-		let currentImport = '';
 
 		return (
 			<div className="section-cart">
@@ -129,7 +134,7 @@ export default class ShoppingCart extends Component {
 							<div className="cart-container">
 								<ul>
 									<li key={index}>
-										<span>{product.img}</span>
+										{ /**<img src= {product.img}></img> */}
 										<span className="cartColor">{product.name}</span>
 										<span className="cartColorQty"> x{product.count}</span>
 										<button onClick={() => this.addProductToCart(product.id)}>
@@ -147,7 +152,7 @@ export default class ShoppingCart extends Component {
 					)
 
 				})}
-				<div className="total-price">TOTAL PRICE : </div>
+				<div className="total-price">TOTAL PRICE : $ {this.sumUpProductPrice()} </div>
 				<div className="contact-background">
 					<div className='back-container'>
 						<Link to={"/build"}>
@@ -167,7 +172,7 @@ export default class ShoppingCart extends Component {
 								<form>
 									<div className="input">
 										<div className="row">
-											<div className="col-sm-6 col-xs-12">
+											<div className="col-sm-6 col-xs-6">
 												<div className="name">
 													<label for="inputYourName"></label>
 													<input type="text" className="form-control" id="inputYourName" placeholder="YOUR NAME*" required=""></input>
@@ -178,22 +183,13 @@ export default class ShoppingCart extends Component {
 												</div>
 												<div className="subject">
 													<label for="inputSubject"></label>
-													<input type="text" className="form-control" id="inputDiscount" placeholder="DISCOUNT CODE*" required=""></input>
+													<input type="text" className="form-control" id="inputDiscount" placeholder="DISCOUNT CODE*" required="" onChange={this.onChangeDiscount} ></input>
 												</div>
 											</div>
-											<div className="col-sm-6 col-xs-12">
+											<div className="col-sm-6 col-xs-6">
 												<div className="form-group">
 													<label for="message"></label>
 													<textarea type="text" form="usrform" className="form-control status-box" rows="6" placeholder="YOUR REQUEST*" required=""></textarea>
-												</div>
-											</div>
-										</div>
-									</div>
-									<div className="input btn-background">
-										<div className="row">
-											<div className="col-sm-12 col-xs-12">
-												<div className="form-group">
-													<input className="btn btn-send" type="submit" value="BUY" onClick={() => this.showModalOnButton()}></input>
 												</div>
 											</div>
 										</div>
@@ -202,6 +198,20 @@ export default class ShoppingCart extends Component {
 							</div>
 						</div>
 					</section>
+					<div>
+						<Button color="danger" onClick={this.toggle}>Submit{this.props.buttonLabel}</Button>
+						<Modal isOpen={this.state.modal} toggle={this.toggle} className={this.props.className}>
+						<ModalHeader toggle={this.toggle}>Thank you for buy</ModalHeader>
+						<ModalBody>
+							Lorem ipsum
+							<div>TOTAL PRICE : $ {this.sumUpProductPrice()} </div>
+						</ModalBody>
+						<ModalFooter>
+							<Button color="primary" onClick={this.onClickBuy}>Buy</Button>{' '}
+							<Button color="secondary" onClick={this.toggle}>Quit</Button>
+						</ModalFooter>
+						</Modal>
+					</div>
 				</div>
 			</div>
 
