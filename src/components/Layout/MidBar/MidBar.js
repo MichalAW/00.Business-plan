@@ -1,7 +1,7 @@
 /* eslint-disable jsx-a11y/img-redundant-alt */
-import React, { Component } from 'react';
+import React, { Component } from './node_modules/react';
 
-import { Route,  Link} from 'react-router-dom';
+import { Route,  Link} from './node_modules/react-router-dom';
 
 import './Midbar.scss';
 
