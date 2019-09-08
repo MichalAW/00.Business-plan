@@ -1,4 +1,4 @@
-import React, { Component } from './node_modules/react';
+import React, { Component } from 'react';
 import './Topbar.scss';
 import '../../../../node_modules/bootstrap/dist/css/bootstrap-reboot.min.css';
 import '../../../../node_modules/bootstrap/dist/css/bootstrap-reboot.css';
