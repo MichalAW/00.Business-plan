@@ -25,18 +25,18 @@ export default class Build extends Component {
 											<div className="col-xs-12 col-sm-6 col-md-6 col-lg-4 col-xl-3">
 												<div className="product-box">
 													<div className="photo">
-														<div src="product-details.html">
+														<a src="product-details.html">
 															<img src={product.img} alt={product.alt}/>
-														</div>
+														</a>
 														<div className="sale">Select</div>
 														<div className="buttons">
-															<div className="btn-main-small box-button">
+															<a className="btn-main-small box-button">
 																<Link className="box-button" to={"/product/" + product.id}>Quick View</Link>
-															</div>
-															<div onClick={() => this.onClickAddToCart(product)} className="btn-main-small box-button">
+															</a>
+															<a onClick={() => this.onClickAddToCart(product)} className="btn-main-small box-button">
 																<i className="fa fa-shopping-basket"></i>
 																ADD TO CART
-															</div>
+															</a>
 														</div>
 													</div>
 													<div className="content">

@@ -22,7 +22,7 @@ Wszystkie potrzebne do pracy pliki źródłowe znajdują się w folderze `src/`.
 
 ## NPM Scripts
 
-Dostępne są 3 główne skrypty przyspieszające pracę:
+Dostępne są 2 główne skrypty przyspieszające pracę:
 
 - `build`: na bazie plików z folderu `src` buduje project w folderze `dist`
 - `start`: odpala projekt, obserwuje zmiany w folderze `src` i przebudowuje projekt

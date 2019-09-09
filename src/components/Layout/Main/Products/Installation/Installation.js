@@ -28,7 +28,7 @@ export default class Installation extends Component {
 														</a>
 														<div className="sale">Select</div>
 														<div className="buttons">
-															<a src="#" className="btn-main-small box-button">
+															<a className="btn-main-small box-button">
 																<Link className="box-button" to={"/product/" + product.id}>Quick View</Link>
 															</a>
 															<a onClick={() => this.onClickAddToCart(product)} className="btn-main-small box-button">

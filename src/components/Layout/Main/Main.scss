@@ -27,14 +27,16 @@
 	}
 
 	.photo {
+		position: relative;
+		padding: 10px 10px 0;
+		overflow: hidden;
+		align-items: flex-end;
+
 		img {
 			max-width: 100%;
 			padding: 0;
 			margin: 0;
 		}
-
-		position: relative;
-		padding: 10px 10px 0;
 
 		background: {
 			color: #f4f5f7;
@@ -42,9 +44,6 @@
 			position: center;
 			repeat: no-repeat;
 		}
-
-		overflow: hidden;
-		align-items: flex-end;
 
 		.sale {
 			position: absolute;
