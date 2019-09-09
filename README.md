@@ -25,7 +25,7 @@ Wszystkie potrzebne do pracy pliki źródłowe znajdują się w folderze `src/`.
 Dostępne są 3 główne skrypty przyspieszające pracę:
 
 - `build`: na bazie plików z folderu `src` buduje project w folderze `dist`
-- `start`: odpala `browser-sync`, obserwuje zmiany w folderze `src` i przebudowuje projekt
+- `start`: odpala projekt, obserwuje zmiany w folderze `src` i przebudowuje projekt
 
 ## Git Hooks
 
