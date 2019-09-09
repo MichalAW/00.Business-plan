@@ -75,7 +75,7 @@ export default class ProductDetails extends Component {
 																<li>Contact between accounting and notary</li>
 																<li>Fast documents transfering</li>
 																<li>Support for specific measures</li>
-																<li>You can use discount code: "ZXCVBNM"</li>
+																<li>You can use a discount code: "ZXCVBNM"</li>
 															</ul>
 														</span>
 													</label>
