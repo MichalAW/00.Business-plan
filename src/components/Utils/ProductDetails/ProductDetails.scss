@@ -5,6 +5,7 @@
 
 .flex-container {
 	display: flex;
+
 	.product-box {
 		background-color: $font-button-color;
 		border: 1px solid #e1e1e1;
@@ -28,14 +29,14 @@
 		}
 
 		.photo {
+			position: relative;
+			padding: 10px 10px 0;
 			img {
+				width: 270px;
 				max-width: 100%;
 				padding: 0;
 				margin: 0;
 			}
-
-			position: relative;
-			padding: 10px 10px 0;
 
 			background: {
 				color: #f4f5f7;
@@ -73,29 +74,6 @@
 				font-size: 16px;
 				line-height: 24px;
 				letter-spacing: 1px;
-			}
-
-			.stars {
-				span {
-					text-decoration: none;
-					color: rgb(42, 42, 42);
-
-					// @extend .fa-star;
-
-					// &.full {
-					// 	@extend .fas;
-					// }
-
-					&.hover-on {
-						font-weight: 900;
-						color: $primary;
-					}
-
-					&.rated-star {
-						font-weight: 900;
-						color: $primary;
-					}
-				}
 			}
 		}
 
@@ -151,34 +129,64 @@
 		}
 	}
 
-	.post-summary {
+	.trigger {
+		input[type="checkbox"] {
+			cursor: pointer;
+			// Hide content via default
+			&+span {
+				visibility: hidden;
+				opacity: 0;
+
+				transition: visibility 0s linear 0.33s, opacity 0.33s linear;
+			}
+
+			// Show if checkbox is clicked
+			&:checked+span {
+				visibility: visible;
+				opacity: 1;
+
+				transition-delay: 0s;
+			}
+		}
+	}
+
+	// Simple styling for message.
+	.msg {
 		border-bottom: 1px solid $color-textfield-border;
 		padding: $base-size;
 		margin-bottom: $base-size;
 		margin-left: -$base-size;
 		transition: .2s;
-		cursor: pointer;
 		background-color: $light-white;
 		font-family: $font-header;
-		ul {
-			display: none;
-		}
-	}
+		display: block;
+		margin-top: 8px;
+		padding: 8px 12px;
+		border: 1px solid #ddd;
+		border-radius: 5px;
 
-	.post-summary:hover {
-		margin-right: -$base-size*2;
-		margin-bottom: -$base-size / 5;
-		border-radius: $radius;
-		box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
-		padding-right: $base-size * 1.5;
-		background-color: $orange-color;
 		ul {
-			display: block;
-			list-style-type: none;
 			li {
-				padding: 15px 0;
-
+				padding: 10px 0;
 			}
 		}
 	}
+}
+
+@media only screen and (max-width: 720px) {
+
+	.menu {
+		display: none;
+	}
+}
+
+@media only screen and (max-width: 620px) {
+
+	.flex-container {
+		flex-direction: column;
+	}
+	.menu {
+		display: none;
+	}
+
 }

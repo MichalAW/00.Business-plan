@@ -1,7 +1,7 @@
-@import '../../../../../sass/variables';
-@import '../../../../../sass/Additionalcomponents/hover';
-@import '../../../../../sass/Additionalcomponents/button';
-@import '../../../../../sass/bootstrap/bootstrap.scss';
+@import '../../../sass/variables';
+@import '../../../sass/Additionalcomponents/hover';
+@import '../../../sass/Additionalcomponents/button';
+@import '../../../sass/bootstrap/bootstrap.scss';
 
 .product-box {
 	background-color: $font-button-color;
@@ -72,29 +72,6 @@
 			font-size: 16px;
 			line-height: 24px;
 			letter-spacing: 1px;
-		}
-
-		.stars {
-			span {
-				text-decoration: none;
-				color: rgb(42, 42, 42);
-
-				// @extend .fa-star;
-
-				// &.full {
-				// 	@extend .fas;
-				// }
-
-				&.hover-on {
-					font-weight: 900;
-					color: $primary;
-				}
-
-				&.rated-star {
-					font-weight: 900;
-					color: $primary;
-				}
-			}
 		}
 	}
 

@@ -1,13 +1,5 @@
 import React, { Component } from 'react';
-import ReactDOM from 'react-dom';
-import { BrowserRouter, Route, Link, Switch } from 'react-router-dom';
-import posed, { PoseGroup } from 'react-pose';
-import './Installation.scss';
-import '../../../../../../node_modules/bootstrap/dist/css/bootstrap-reboot.min.css';
-import '../../../../../../node_modules/bootstrap/dist/css/bootstrap-reboot.css';
-import '../../../../../../node_modules/bootstrap/dist/css/bootstrap.css';
-import '../../../../../../node_modules/bootstrap/dist/css/bootstrap.min.css';
-
+import {Route, Link } from 'react-router-dom';
 
 export default class Installation extends Component {
 	constructor(props) {
@@ -47,11 +39,6 @@ export default class Installation extends Component {
 													</div>
 													<div className="content">
 														<h5>{product.name}</h5>
-														<div className="stars">
-															<span className="full star"></span> <span className="full star"></span>
-															<span className="star"></span> <span className="star"></span>
-															<span className="star"></span>
-														</div>
 													</div>
 													<div className="line"></div>
 													<div className="actions">

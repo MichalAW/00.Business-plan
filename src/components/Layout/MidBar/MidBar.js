@@ -1,16 +1,10 @@
 /* eslint-disable jsx-a11y/img-redundant-alt */
 import React, { Component } from 'react';
 
-import { Route,  Link} from 'react-router-dom';
-
 import './Midbar.scss';
 
 import logo from '../../../images/logo.jpg';
 
-import '../../../../node_modules/bootstrap/dist/css/bootstrap-reboot.min.css';
-import '../../../../node_modules/bootstrap/dist/css/bootstrap-reboot.css';
-import '../../../../node_modules/bootstrap/dist/css/bootstrap.css';
-import '../../../../node_modules/bootstrap/dist/css/bootstrap.min.css';
 export default class Midbar extends Component {
 	constructor(props) {
 		super(props);
@@ -71,7 +65,6 @@ export default class Midbar extends Component {
 							<div className="col-sm-6 col-md-4 col-lg-4 col-xl-4 cart">
 								<a href={"/cart/"}>
 									<div className="cart-box">
-
 										<div className="cart-icon">
 											<i className="fas fa-shopping-basket"></i>
 										</div>

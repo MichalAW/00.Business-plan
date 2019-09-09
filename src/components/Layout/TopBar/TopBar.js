@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import ReactDOM from 'react-dom';
 import { Button, Modal, ModalHeader, ModalFooter, ModalBody } from 'reactstrap';
 
 import './Topbar.scss';
@@ -39,9 +38,9 @@ export default class Topbar extends Component {
 										<span></span>
 									</div>
 									<ul>
-										<li><a className="active" href="#">Home</a></li>
-										<li><a href="#">Faq</a></li>
-										<li><a href="#">About</a></li>
+										<li><div className="active" href="#">Home</div></li>
+										<li><div>Faq</div></li>
+										<li><div>About</div></li>
 									</ul>
 								</div>
 							</div>
@@ -51,19 +50,23 @@ export default class Topbar extends Component {
 						<h3>Welcome to my site!</h3>
 						<h1>Create your Business plan</h1>
 						<div className="button-welcome">
-							<button className="btn" isOpen={this.state.modal} onClick={this.toggle}>TELL ME MORE</button>
+							<button className="btn" isOpen={this.state.modal} onClick={this.toggle}>TELL ME MORE{this.props.buttonLabel}</button>
 						</div>
 					</div>
 				</div>
 				<div>
-					<Button color="danger" onClick={this.toggle}>Submit{this.props.buttonLabel}</Button>
 					<Modal isOpen={this.state.modal} toggle={this.toggle} className={this.props.className}>
-					<ModalHeader toggle={this.toggle}>Thank you for buy</ModalHeader>
+					<ModalHeader toggle={this.toggle}>Welcome, here's couple details about this site</ModalHeader>
 					<ModalBody>
-						Select "Buy" to finish your purchase
+						<ul>
+							<li>You can switch between products by clickling : Build, Furnishings, Installation, Machine or dots on the panel</li>
+							<li>You can see product details by clicking "QUICK VIEW" on the specific product</li>
+							<li>You can add product to cart by clicking "ADD TO CARD"</li>
+							<li>You can check your cart by cliking cart icon on right of the logo "WANTA"</li>
+							<li>You want div discount? Here you go: "ZXCVBNM"</li>
+						</ul>
 					</ModalBody>
 					<ModalFooter>
-						<Button color="primary" onClick={this.onClickBuy}>Buy</Button>{' '}
 						<Button color="secondary" onClick={this.toggle}>Quit</Button>
 					</ModalFooter>
 					</Modal>

@@ -1,13 +1,5 @@
 import React, { Component } from 'react';
-import ReactDOM from 'react-dom';
-import { BrowserRouter, Route, Link, Switch } from 'react-router-dom';
-import posed, { PoseGroup } from 'react-pose';
-import './Furnishings.scss';
-import '../../../../../../node_modules/bootstrap/dist/css/bootstrap-reboot.min.css';
-import '../../../../../../node_modules/bootstrap/dist/css/bootstrap-reboot.css';
-import '../../../../../../node_modules/bootstrap/dist/css/bootstrap.css';
-import '../../../../../../node_modules/bootstrap/dist/css/bootstrap.min.css';
-
+import { Route, Link } from 'react-router-dom';
 
 export default class Furnishings extends Component {
 	constructor(props) {
@@ -31,33 +23,28 @@ export default class Furnishings extends Component {
 											<div className="col-xs-12 col-sm-6 col-md-6 col-lg-4 col-xl-3">
 												<div className="product-box">
 													<div className="photo">
-														<a src="product-details.html">
+														<div src="product-details.html">
 															<img src={product.img} alt={product.alt}/>
-														</a>
+														</div>
 														<div className="sale">Select</div>
 														<div className="buttons">
-															<a src="#" className="btn-main-small box-button">
+															<div className="btn-main-small box-button">
 																<Link className="box-button" to={"/product/" + product.id}>Quick View</Link>
-															</a>
-															<a onClick={() => this.onClickAddToCart(product)} className="btn-main-small box-button">
+															</div>
+															<div onClick={() => this.onClickAddToCart(product)} className="btn-main-small box-button">
 																<i className="fa fa-shopping-basket"></i>
 																ADD TO CART
-															</a>
+															</div>
 														</div>
 													</div>
 													<div className="content">
 														<h5>{product.name}</h5>
-														<div className="stars">
-															<span className="full star"></span> <span className="full star"></span>
-															<span className="star"></span> <span className="star"></span>
-															<span className="star"></span>
-														</div>
 													</div>
 													<div className="line"></div>
 													<div className="actions">
 														<div className="outlines">
-															<a src="#" className="btn-outline active"><i className="far fa-heart"></i></a>
-															<a src="#" className="btn-outline"><i className="fas fa-exchange-alt"></i></a>
+															<div className="btn-outline active"><i className="far fa-heart"></i></div>
+															<div className="btn-outline"><i className="fas fa-exchange-alt"></i></div>
 														</div>
 														<div className="price"><div className="btn-main-small price">$ {product.price}</div></div>
 													</div>

@@ -1,18 +1,17 @@
-import React, { Component } from 'react'
-import Build from '../../Layout/Main/Products/Build/Build';
-import Furnishings from '../../Layout/Main/Products/Furnishings/Furnishings';
-import Installation from '../../Layout/Main/Products/Installation/Installation';
-import Machine from '../../Layout/Main/Products/Machine/Machine';
+import React, { Component } from 'react';
+
 import './Sorter.scss';
+
 export default class Sorter extends Component {
 	constructor(props) {
 		super(props);
 		this.handleChange = this.handleChange.bind(this)
-	}
+	};
 
 	handleChange(event) {
 		this.props.onChangeSort(event.target.value);
-	}
+	};
+
 	render() {
 
 		return (
@@ -28,4 +27,3 @@ export default class Sorter extends Component {
 		);
 	};
 };
-

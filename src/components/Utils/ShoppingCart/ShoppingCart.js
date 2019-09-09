@@ -1,8 +1,7 @@
 // VARIABLES
 import React, { Component } from 'react';
-import ReactDOM from 'react-dom';
+
 import { Button, Modal, ModalHeader, ModalFooter, ModalBody } from 'reactstrap';
-import ProductDetails from '../../Layout/Main/Main';
 import { Link } from 'react-router-dom';
 import './ShoppingCart.scss';
 
@@ -129,11 +128,11 @@ export default class ShoppingCart extends Component {
 		return (
 			<div className="container">
 				<div className="section-cart">
-								<div className='back-container'>
-					<Link to={"/build"}>
-						<button className="back-button">back to shop</button>
-					</Link>
-				</div>
+					<div className='back-container'>
+						<Link to={"/build"}>
+							<button className="back-button">back to shop</button>
+						</Link>
+					</div>
 					<h2>YOUR LIST :</h2>
 
 					{this.mergeCart(this.state.cart).map((product, index) => {
@@ -144,7 +143,7 @@ export default class ShoppingCart extends Component {
 										<li className="row" key={index}>
 											<div className="cart-description col-xs-12 col-sm-3 col-md-3">
 												<div>
-													<img src= {product.img}></img>
+													<img src= {product.img} alt= {product.alt}></img>
 												</div>
 												<div className="cartColor">{product.name}</div>
 												<div className="cartColorQty"> x{product.count}</div>
@@ -155,15 +154,15 @@ export default class ShoppingCart extends Component {
 											</div>
 											<div className="shop-button col-xs-12 col-sm-3 col-md-3">
 												<button onClick={() => this.addProductToCart(product.id)}>
-													➕
+													<span>➕</span>
 												</button>
 												<button onClick={() => this.removeSingleProduct(product.id)}>
-													➖
+													<span>➖</span>
 												</button>
 											</div>
 											<div className="shop-button col-xs-12 col-sm-3 col-md-3">
 												<button onClick={() => this.removeProductFromCart(product.id)}>
-													🗑
+													<span>🗑</span>
 												</button>
 											</div>
 										</li>
@@ -224,7 +223,8 @@ export default class ShoppingCart extends Component {
 							<Modal isOpen={this.state.modal} toggle={this.toggle} className={this.props.className}>
 							<ModalHeader toggle={this.toggle}>Thank you for buy</ModalHeader>
 							<ModalBody>
-								Select "Buy" to finish your purchase
+								<h4>Select "Buy" to finish your purchase</h4>
+								<p>Don't forget to write your e-mail and wait 2 days, and you'll receive your business plan!</p>
 								<div>TOTAL PRICE : $ {this.sumUpProductPrice()} </div>
 							</ModalBody>
 							<ModalFooter>

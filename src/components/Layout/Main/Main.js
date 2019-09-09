@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { BrowserRouter, Switch, Route } from "react-router-dom";
 import { MainNavigation } from "../MainNavigation/MainNavigation";
+
 import ProductDetails from '../../Utils/ProductDetails/ProductDetails';
 import ShoppingCart from '../../../components/Utils/ShoppingCart/ShoppingCart';
 import Build from './Products/Build/Build';
@@ -24,6 +25,14 @@ import forHouse from '../../../images/forHouse.jpg';
 import forOffice from '../../../images/forOffice.jpg';
 import forPublic from '../../../images/forPublic.jpg';
 import forShop from '../../../images/forShop.jpg';
+
+import './Main.scss'
+
+import '../../../../node_modules/bootstrap/dist/css/bootstrap-reboot.min.css';
+import '../../../../node_modules/bootstrap/dist/css/bootstrap-reboot.css';
+import '../../../../node_modules/bootstrap/dist/css/bootstrap.css';
+import '../../../../node_modules/bootstrap/dist/css/bootstrap.min.css';
+
 
 const products = [{
 		id: 1,
