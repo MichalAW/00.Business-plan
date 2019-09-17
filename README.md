@@ -93,4 +93,4 @@ Sekcja Panel-Bar znajduje się w klasie content-container:
 
 # LINK DO REPOZYTORIUM
 
-repo --> https://github.com/MichalAW/31.Business-plan.git
+repo --> https://github.com/MichalAW/33.Business-plan.git
