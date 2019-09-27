@@ -1,5 +1,5 @@
 # Projekt aplkiacji biznes-plan
-
+Documentaion in native polish language, becouse app is still in develop.
 ## Opis projektu
 
 -Projekt ma celu stworzenie aplikacji, odpowiedzialnej za tworzenie biznes-planów.
