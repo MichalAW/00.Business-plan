@@ -1,5 +1,5 @@
 # Projekt aplkiacji biznes-plan
-
+Documentaion in native polish language, becouse app is still in develop.
 ## Opis projektu
 
 -Projekt ma celu stworzenie aplikacji, odpowiedzialnej za tworzenie biznes-planów.
@@ -93,4 +93,4 @@ Sekcja Panel-Bar znajduje się w klasie content-container:
 
 # LINK DO REPOZYTORIUM
 
-repo --> https://github.com/MichalAW/00.Business-plan.git
+repo --> https://github.com/MichalAW/33.Business-plan.git
