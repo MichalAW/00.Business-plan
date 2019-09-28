@@ -38,9 +38,10 @@ export default class Topbar extends Component {
 										<span></span>
 									</div>
 									<ul>
-										<li><div className="active" href="#">Home</div></li>
-										<li><div>Faq</div></li>
-										<li><div>About</div></li>
+										<li><div href="#" className="active">Home</div></li>
+										<li><div href="#" data-id="contact-us">Contact</div></li>
+										<li><div href="#" lass="scroll-link" data-id="products">Products</div></li>
+										<li><div href="#" data-id="about">About</div></li>
 									</ul>
 								</div>
 							</div>
